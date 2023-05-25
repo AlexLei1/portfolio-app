@@ -1,0 +1,11 @@
+.container{
+	position: relative;
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	gap: 50px;
+
+	@media(max-width: 1000px){
+		display: block;
+		padding-bottom: 300px
+	}
+}

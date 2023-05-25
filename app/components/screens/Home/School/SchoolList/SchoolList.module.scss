@@ -1,0 +1,50 @@
+@import '../../../../../assets/styles/_variables.scss';
+.tabList {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 3;
+	width: max-content;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	
+	@media(max-width: 600px){
+		flex-direction: row;
+    overflow-x: auto;
+    width: calc(100% + 100px);
+    padding-left: 50px;
+    margin-left: -50px;
+    margin-bottom: 30px;
+		
+	}
+	> button {
+		background-color: transparent;
+		border: none;
+		padding: 12px 5px;
+		transition: $transition;
+		width: 100%;
+		height: $tab-height;
+		padding: 0 20px 2px;
+		color: red;
+		font-family: $font-mono;
+		font-size: $fz-xs;
+		text-align: left;
+
+		&:hover {
+			background-color: rgb(16, 97, 151);
+		}
+
+		@media(max-width: 600px){
+			text-align: center;
+		}
+	}
+	> span {
+		color: green;
+	}
+	
+	.active {
+		background-color: rgb(16, 97, 151);
+	}
+}
+

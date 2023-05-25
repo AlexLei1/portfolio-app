@@ -1,0 +1,40 @@
+@import '../../../../../assets/styles/variables.scss';
+
+.nav {
+	display: flex;
+	align-items: center;
+	
+	@media (max-width: 768px){
+		display: none;
+	}
+	> ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px;
+		margin: 0px;
+		
+		li {
+			margin: 0 5px;
+			position: relative;
+			counter-increment: item 1;
+			
+			a {
+				padding: 10px;
+				text-decoration: none;
+				color: #fff;
+				font-size: $fz-xs;
+	
+				&:before {
+					font-family: $font-mono;
+					content: '0' counter(item) '.';
+					margin-right: 5px;
+					color: rgb(255, 238, 0);
+					font-size: $fz-xs;
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+

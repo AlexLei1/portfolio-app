@@ -1,0 +1,14 @@
+@import '@/assets/styles/_variables.scss';
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	color: #fff;
+	font-family: $font-mono;
+	counter-reset: item 0;
+	z-index: 12;
+}
+
+

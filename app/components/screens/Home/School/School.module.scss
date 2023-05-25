@@ -1,0 +1,17 @@
+.section {
+	background-color: rgb(25, 34, 29);
+	max-width: 700px;
+
+	.inner {
+		padding-top: 40px;
+		display: flex;
+
+		@media(max-width: 600px){
+			flex-direction: column;
+		}
+
+		@media(min-width: 700px){
+			min-height: 340px;
+		}
+	}
+}

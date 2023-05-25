@@ -1,0 +1,42 @@
+@import '../../../assets/styles/variables.scss';
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0px;
+	z-index: 11;
+	padding: 0px 50px;
+	width: 100%;
+	height: $nav-height;
+	background-color: rgb(41, 9, 9);
+	backdrop-filter: blur(10px);
+	transition: $transition;
+	filter: none !important;
+	pointer-events: auto !important;
+	user-select: auto !important;
+	
+	@media (max-width: 1080px) {
+		padding: 0 40px
+	}
+	@media (max-width: 768px) {
+		padding: 0 25px
+	}
+}
+
+
+// стиль header при скроле вверх  
+.up {
+	height: $nav-scroll-height;
+	transform: translateY(0px);
+	background-color: rgba(41, 9, 9, 0.808);
+	box-shadow: 0 10px 30px -10px $navy-shadow;
+}
+
+// стиль header при скроле вниз 
+.down {
+	height: $nav-scroll-height;
+	transform: translateY(calc($nav-scroll-height) * -1);
+	box-shadow: 0 10px 30px -10px $navy-shadow;
+}

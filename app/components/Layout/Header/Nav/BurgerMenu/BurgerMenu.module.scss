@@ -1,0 +1,80 @@
+@import '../../../../../assets/styles/_variables.scss';
+.wrapper {
+	display: none;
+	@media(max-width: 768px) {
+		display: block;
+	}
+
+	.burger {
+		display: flex;
+		cursor: pointer;
+		position: relative;
+		border: none;
+		padding: 0;
+		z-index: 10;
+		
+	
+		> span {
+			height: 3px;
+			width: 42px;
+			transition-duration: .15s;
+			transition-delay: .15s;	
+	
+			&::before {
+				left: 0;
+				position: absolute;
+				top: -10px;
+				height: 3px;
+				width: 42px;
+				background-color: rgb(255, 255, 255);
+				content: "";
+				transition-duration: .15s;
+				transition: transform .15s, top .15s .15s;
+			}
+	
+			&::after {
+				left: 0;
+				position: absolute;
+				top: 10px;
+				height: 3px;
+				width: 42px;
+				background-color:rgb(255, 255, 255);
+				content: "";
+				transition-duration: .15s;
+				transition: transform .15s, top .15s .15s;
+			}
+		}
+	}
+	
+	.active {
+		display: flex;
+		cursor: pointer;
+		position: relative;
+		border: none;
+		padding: 0;
+		z-index: 10;
+	
+		> span {
+			height: 0px;
+			transition-duration: 0.1s;
+			transition-delay: .15s;
+			background-color: none;
+			background: transparent;
+	
+			&::before {
+				transition: top .15s, transform .15s .15s;
+				top: 0px;
+				transform: rotateZ(-45deg);
+			}
+	
+			&::after {
+				transition: top 0.4s, transform .15s .15s;
+				top: 0px;
+				transform: rotateZ(45deg);
+			}
+		}
+	}
+}
+
+
+

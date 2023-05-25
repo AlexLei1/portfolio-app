@@ -1,0 +1,72 @@
+@import '../../../../../../assets/styles/_variables.scss';
+
+.burger {
+	display: flex;
+	cursor: pointer;
+	position: relative;
+	border: none;
+	padding: 0;
+
+	> span {
+		height: 3px;
+		width: 42px;
+		transition-duration: .25s;
+		transition-delay: .25s;	
+
+		&::before {
+			left: 0;
+			position: absolute;
+			top: -10px;
+			height: 3px;
+			width: 42px;
+			background-color: rgb(255, 255, 255);
+			content: "";
+			transition-duration: .25s;
+			transition: transform .25s, top .25s .25s;
+		}
+
+		&::after {
+			left: 0;
+			position: absolute;
+			top: 10px;
+			height: 3px;
+			width: 42px;
+			background-color:rgb(255, 255, 255);
+			content: "";
+			transition-duration: .25s;
+			transition: transform .25s, top .25s .25s;
+		}
+	}
+}
+
+.active {
+	display: flex;
+	cursor: pointer;
+	position: relative;
+	border: none;
+	padding: 0;
+	z-index: 10;
+
+	> span {
+		height: 0px;
+		transition-duration: 0.1s;
+		transition-delay: .25s;
+		background-color: none;
+		background: transparent;
+
+		&::before {
+			transition: top .25s, transform .25s .25s;
+			top: 0px;
+			transform: rotateZ(-45deg);
+		}
+
+		&::after {
+			transition: top 0.4s, transform .25s .25s;
+			top: 0px;
+			transform: rotateZ(45deg);
+		}
+	}
+}
+
+
+

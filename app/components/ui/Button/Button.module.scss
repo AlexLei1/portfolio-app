@@ -1,0 +1,36 @@
+@import '../../../assets/styles/variables.scss';
+
+.button {
+	color: #fff;
+	font-family: $font-mono;
+  font-size:13px;
+  max-width: 160px;
+  position: relative;
+  width: 100%; 
+	border: 2px solid;
+  overflow: hidden;
+  position: relative;
+	background: rgba(#fff, 0);
+	padding: 12px 16px;
+
+	&:after {
+		content: "";
+    background: #fff;
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
+}
+
+.button:hover {
+  &:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}

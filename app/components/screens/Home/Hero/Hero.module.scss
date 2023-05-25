@@ -1,0 +1,52 @@
+@import '../../../../assets/styles/variables.scss';
+
+.section {
+	display: flex;
+	max-width: 1000px;
+	justify-content: center;
+	flex-direction: column;
+	align-items: flex-start;
+	min-height: 100vh;
+
+	background-color: rgb(71, 0, 0);
+	height: 100vh;
+	
+	.title {
+		margin: 0px 0px 30px 4px;
+		color: green;
+		font-family: $font-mono;
+		font-size: clamp($fz-sm, 5vw, $fz-md);
+		font-weight: 400;
+	}
+
+	> div {
+		
+
+		> h2 {
+			margin: 0px;
+    	font-size: clamp(40px, 8vw, 80px);
+			margin: 0px 0px 10px;
+			font-weight: 600;
+		}
+
+		> h3 {
+			margin-top: 5px;
+			line-height: 0.9;
+			font-weight: 600;
+			margin: 0px;
+    	font-size: clamp(40px, 8vw, 80px);
+		}
+
+		> p {
+			margin: 20px 0px 0px;
+    	max-width: 540px;
+		}
+	}
+}
+
+@media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
+	.section {
+		height: auto;
+    padding-top: $nav-height;
+	}
+}
