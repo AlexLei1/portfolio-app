@@ -7,7 +7,6 @@ import Loader from '@/ui/Loader/Loader';
 
 const Layout: FC = ({ children }) => {
 	const routers = useRouter()
-	// const asPath = routers.asPath.substring(2)
 	const isHome = routers.pathname === '/'
 	const [isLoading, setIsLoading] = useState(isHome);
 
@@ -15,16 +14,14 @@ const Layout: FC = ({ children }) => {
 		<>
 			{isLoading && isHome ? (
 				<Loader finishLoading={() => setIsLoading(false)}/>
-			) : (
-				<div className={styles.layout}>
-					<Header/>
-					<div>{children}</div>
-				</div>
-			)
-		}
-			
+				) : (
+					<div className={styles.layout}>
+						<Header/>
+						<div>{children}</div>
+					</div>
+				)
+			}
 		</>
-	
 	)
 }
 
