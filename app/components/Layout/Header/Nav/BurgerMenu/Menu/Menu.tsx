@@ -10,7 +10,7 @@ interface IMenu {
 
 const Menu:FC<IMenu> = ({isShow}) => {
 	return (
-		<aside className={cn(styles.aside, {[styles.active]: isShow})}>
+		<aside className={cn(styles.aside, {[styles.active]: !isShow})}>
 			<nav>
 				<ul>
 					<li><Link href='#about' scroll={false}>About</Link></li>

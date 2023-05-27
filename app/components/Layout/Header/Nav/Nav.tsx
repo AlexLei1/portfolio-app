@@ -2,7 +2,7 @@ import {FC} from 'react'
 import styles from './Nav.module.scss'
 import Logo from './Logo/Logo';
 import NavItems from './NavItems/NavItems';
-import BurgerMenu from './BurgerMenu/BurgerMenu';
+import Burger from './Burger/Burger';
 
 
 const Nav: FC = () => {
@@ -10,7 +10,7 @@ const Nav: FC = () => {
 		<div className={styles.nav}>
 			<Logo/>
 			<NavItems/>
-			<BurgerMenu/>
+			<Burger/>
 		</div>
 	)
 }

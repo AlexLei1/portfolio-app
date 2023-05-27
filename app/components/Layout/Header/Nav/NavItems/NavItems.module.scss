@@ -11,41 +11,107 @@
 	}
 }
 
-.nav {
-	display: flex;
-	align-items: center;
-	
-	@media (max-width: 768px){
-		display: none;
-	}
-	> ul {
+.container {
+	nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0px;
-		margin: 0px;
 		
-		li {
-			margin: 0 5px;
-			position: relative;
-			counter-increment: item 1;
+		> ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			
-			a {
-				padding: 10px;
-				text-decoration: none;
-				color: #fff;
-				font-size: $fz-xs;
-	
-				&:before {
-					font-family: $font-mono;
-					content: '0' counter(item) '.';
-					margin-right: 5px;
-					color: rgb(255, 238, 0);
+			li {
+				margin: 0 5px;
+				counter-increment: item 1;
+				
+				a {
+					padding: 10px;
+					text-decoration: none;
+					color: #fff;
 					font-size: $fz-xs;
-					text-align: right;
+		
+					&:before {
+						font-family: $font-mono;
+						content: '0' counter(item) '.';
+						margin-right: 5px;
+						color: rgb(0, 238, 255);
+						font-size: $fz-xs;
+						text-align: right;
+					}
 				}
 			}
 		}
 	}
 }
 
+@media(max-width: 768px) {
+	.container{
+		display: flex;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: 0px;
+		padding: 50px 10px;
+		width: min(75vw, 400px);
+		height: 100vh;
+		outline: 0px;
+		background-color: $light-navy;
+		box-shadow: -10px 0px 30px -15px $navy-shadow;
+		z-index: 9;
+		transform: translateX(100vw);
+		visibility: hidden;
+		transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+
+		nav {
+			width: 100%;
+			flex-direction: column;
+			justify-content: space-between;
+			font-family: $font-mono;
+			text-align: center;
+
+			> ul {
+				display: block;
+				padding: 0px;
+				margin: 0px;
+				list-style: none;
+				width: 100%;
+
+				li {
+					position: relative;
+					margin: 0px auto 20px;
+					counter-increment: item 1;
+
+					a {
+						display: inline-block;
+						text-decoration: none;
+						text-decoration-skip-ink: auto;
+						color: inherit;
+						position: relative;
+						transition: $transition;
+						width: 100%;
+						padding: 3px 20px 20px;
+						font-size: clamp($fz-sm, 4vw, $fz-lg);
+						
+
+						&:before {
+							content: "0" counter(item) ".";
+							display: block;
+							margin-right: 0px;
+							margin-bottom: 5px;
+							font-size: clamp($fz-sm, 4vw, $fz-lg);
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.active {
+	transform: translateX(0vw);
+	visibility: visible;
+}
