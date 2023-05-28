@@ -15,7 +15,6 @@ const Burger: FC = () => {
 				<span></span>
 			</button>
 		</div>
-		
 	)
 }
 

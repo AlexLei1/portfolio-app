@@ -1,5 +1,4 @@
-@import '../../../../../../assets/styles/_variables.scss';
-
+@import '../../../../../assets/styles/variables.scss';
 
 @keyframes appear {
 	0% {
@@ -12,7 +11,7 @@
 	}
 }
 
-.aside {
+.container{
 	display: flex;
 	align-items: center;
 	position: fixed;
@@ -32,46 +31,56 @@
 
 	nav {
 		display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    flex-direction: column;
-    color: red;
-    font-family: $font-mono;
-    text-align: center;
-		
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		font-family: $font-mono;
+		text-align: center;
+
 		> ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			display: block;
 			padding: 0px;
 			margin: 0px;
 			list-style: none;
 			width: 100%;
-			
+
 			li {
 				position: relative;
 				margin: 0px auto 20px;
 				counter-increment: item 1;
-				font-size: clamp($fz-sm, 4vw, $fz-lg);
-				
+
 				a {
 					display: inline-block;
 					text-decoration: none;
 					text-decoration-skip-ink: auto;
-					color: inherit;
+					color: #fff;
 					position: relative;
 					transition: $transition;
 					width: 100%;
 					padding: 3px 20px 20px;
-		
+					font-size: clamp($fz-sm, 4vw, $fz-lg);
+					
+
 					&:before {
 						content: "0" counter(item) ".";
 						display: block;
+						font-family: $font-mono;
+						color: rgb(0, 238, 255);
 						margin-bottom: 5px;
-						color: green;
-						font-size: $fz-sm;
+						font-size: clamp($fz-sm, 4vw, $fz-lg);
+						text-align: center;
 					}
 				}
 			}
 		}
+	}
+	@media(min-width: 768px) {
+		display: none;
 	}
 }
 

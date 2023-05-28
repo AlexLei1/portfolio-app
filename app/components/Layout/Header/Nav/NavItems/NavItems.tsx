@@ -2,16 +2,10 @@ import {FC} from 'react'
 import styles from './NavItems.module.scss'
 import  Link  from 'next/link';
 import Button from '@/components/ui/Button/Button';
-import { useTypedSelector } from '@/hooks/useTypedSelector';
-import cn from 'classnames';
-
 
 const NavItems: FC = () => {
-	const {isShow} = useTypedSelector(state => state.burger)
-
 	return (
-	<div className={cn(styles.container, {[styles.active]: isShow})}>
-		<nav>
+		<nav className={styles.nav}>
 			<ul>
 				<li><Link href='#about' scroll={false}>About</Link></li>
 				<li><Link href='#school' scroll={false}>School</Link></li>
@@ -20,7 +14,6 @@ const NavItems: FC = () => {
 			</ul>
 			<Button>Resume</Button>
 		</nav>
-	</div>
 	)
 }
 

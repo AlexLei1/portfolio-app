@@ -8,10 +8,10 @@
 
 	.container{
 		display: block;
-
+		cursor: pointer;
+		
 		.burger {
 			display: flex;
-			cursor: pointer;
 			position: relative;
 			border: none;
 			padding: 0;
