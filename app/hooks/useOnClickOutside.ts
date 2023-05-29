@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react"
 
-
 export const useOnClickOutside = (toggleBurger: any, isShow: any ) => {
 	const ref = useRef<HTMLDivElement>(null) 
 	

@@ -1,15 +1,4 @@
-@import '../../../../../assets/styles/variables.scss';
-
-@keyframes appear {
-	0% {
-		opacity: 0;
-		translate: -30px 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
+@import 'app/assets/styles/variables';
 
 .container{
 	display: flex;
@@ -31,13 +20,13 @@
 
 	nav {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		text-align: center;
 		width: 100%;
 		flex-direction: column;
 		justify-content: space-between;
 		font-family: $font-mono;
-		text-align: center;
+
 
 		> ul {
 			display: flex;

@@ -2,15 +2,11 @@
 
 .section {
 	display: flex;
-	max-width: 1000px;
-	justify-content: center;
 	flex-direction: column;
-	align-items: flex-start;
-	min-height: 100vh;
-
-	background-color: rgb(71, 0, 0);
+	justify-content: center;
 	height: 100vh;
-	
+	background-color: rgb(71, 0, 0);
+
 	.title {
 		margin: 0px 0px 30px 4px;
 		color: green;

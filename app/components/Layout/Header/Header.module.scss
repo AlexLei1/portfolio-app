@@ -1,4 +1,4 @@
-@import '../../../assets/styles/variables.scss';
+@import 'app/assets/styles/variables.scss';
 
 .header {
 	display: flex;
@@ -10,7 +10,7 @@
 	padding: 0px 50px;
 	width: 100%;
 	height: $nav-height;
-	background-color: rgb(41, 9, 9);
+	background-color: $dark;
 	backdrop-filter: blur(10px);
 	transition: $transition;
 	filter: none !important;

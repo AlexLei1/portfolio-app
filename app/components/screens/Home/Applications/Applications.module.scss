@@ -1,0 +1,20 @@
+.section {
+
+	> ul {
+		display: flex;
+
+	> li {
+		display: grid;
+
+		&:first-child {
+
+		}
+
+		&:last-child {
+
+		}
+		}
+	}
+
+
+}
