@@ -1,15 +1,34 @@
 @import '../../fonts/fonts.scss';
 
 // colors
-$dark:#272241;
-$white:  #f0ecff;
-$dark-navy: hsl(0, 0%, 6%);
+$dark:#10002b;
+
+$dark-navy:#0A192F;
 $navy: #0a192f;
 $light-navy: #112240;
 $lightest-navy: #233554;
 $navy-shadow: rgba(2,12,27,0.7);
 $dark-slate: #495670;
 $light-slate: rgb(16, 101, 150);
+
+$black: #590d22;
+$black-transparent: #111111a2;
+$white:  #e7e7e7;
+
+$gray-light: #a9d1a8;
+$gray: #585858;
+$gray-dark: #282828;
+
+
+$dark-purpal: #240046;
+$purpal: #3c096c;
+$light-purpal: #9d4edd;
+$lightest-purpal:#f9f0ff;
+$purpal-shadow: rgba(36, 0, 37, 0.7);
+
+
+
+$primary-color:#ffee32;
 
 // fonts
 $font-sans: "Calibre","Inter","San Francisco","SF Pro Text", -apple-system, system-ui, sans-serif;
@@ -41,3 +60,13 @@ $ham-after: bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.
 $ham-after-active: bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;
 
 
+// theme
+$mobileS: 330px;
+$mobileM: 400px;
+$mobileL: 480px;
+$tabletS: 600px;
+$tabletL: 768px;
+$desktopXS: 900px;
+$desktopS: 1080px;
+$desktopM: 1200px;
+$desktopL: 1400px;

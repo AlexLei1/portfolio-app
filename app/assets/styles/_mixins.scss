@@ -1,0 +1,79 @@
+@import 'variables';
+
+// @mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+//   font-size: $font-size * 1px;
+//   // font-size: $font-size * 0.1rem;
+//   // example using rem values and 62.5% font-size so 1rem = 10px
+
+//   @if $line-height==normal {
+//     line-height: normal;
+//   } @else {
+//     line-height: $line-height / $font-size;
+//   }
+
+//   @if $letter-spacing==normal {
+//     letter-spacing: normal;
+//   } @else {
+//     letter-spacing: #{$letter-spacing / $font-size}em;
+//   }
+// }
+
+@mixin mobileS {
+  @media only screen and (max-width: $mobileS) {
+    @content;
+  }
+}
+
+@mixin mobileM {
+  @media only screen and (max-width: $mobileM) {
+    @content;
+  }
+}
+
+@mixin mobileL {
+  @media only screen and (max-width: $mobileL) {
+    @content;
+  }
+}
+
+@mixin tabletS {
+  @media only screen and (max-width: $tabletS) {
+    @content;
+  }
+}
+
+@mixin tabletL {
+  @media only screen and (max-width: $tabletL) {
+    @content;
+  }
+}
+
+@mixin desktopXS {
+  @media only screen and (max-width: $desktopXS) {
+    @content;
+  }
+}
+
+@mixin desktopS {
+  @media only screen and (max-width: $desktopS) {
+    @content;
+  }
+}
+
+@mixin desktopM {
+  @media only screen and (max-width: $desktopM) {
+    @content;
+  }
+}
+
+@mixin desktopL {
+  @media only screen and (max-width: $desktopL) {
+    @content;
+  }
+}
+
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

@@ -1,4 +1,5 @@
-@import 'app/assets/styles/variables.scss';
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
 
 .header {
 	display: flex;
@@ -17,12 +18,14 @@
 	pointer-events: auto !important;
 	user-select: auto !important;
 	
-	@media (max-width: 1080px) {
+
+	@include desktopS {
 		padding: 0 40px
 	}
-	@media (max-width: 768px) {
+	@include tabletL {
 		padding: 0 25px
 	}
+
 }
 
 
@@ -30,7 +33,7 @@
 .up {
 	height: $nav-scroll-height;
 	transform: translateY(0px);
-	background-color: rgba(41, 9, 9, 0.808);
+	background-color: $black-transparent;
 	box-shadow: 0 10px 30px -10px $navy-shadow;
 }
 
