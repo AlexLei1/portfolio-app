@@ -6,11 +6,11 @@
 	flex-direction: column;
 	justify-content: center;
 	height: 100vh;
-	background-color: rgb(71, 0, 0);
+	background-color: transparent;
 
 	.title {
 		margin: 0px 0px 30px 4px;
-		color: green;
+		color: $primary-color;
 		font-family: $font-mono;
 		font-size: clamp($fz-sm, 5vw, $fz-md);
 		font-weight: 400;

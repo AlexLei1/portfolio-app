@@ -3,12 +3,17 @@ import styles from './Layout.module.scss'
 import Header from './Header/Header';
 import { useRouter } from 'next/router';
 import Loader from '@/ui/Loader/Loader';
+import { useTypedSelector } from '@/hooks/useTypedSelector';
 
+interface ILayout {
+	children: React.ReactNode
+}
 
-const Layout: FC = ({ children }) => {
+const Layout: FC<ILayout> = ({ children }) => {
 	const routers = useRouter()
 	const isHome = routers.pathname === '/'
 	const [isLoading, setIsLoading] = useState(isHome);
+	const {isShow} = useTypedSelector(state => state.burger)
 
 	return (
 		<>
@@ -17,7 +22,7 @@ const Layout: FC = ({ children }) => {
 				) : (
 					<div className={styles.layout}>
 						<Header/>
-						<div>{children}</div>
+						<div className={isShow ? styles.filter : ''}>{children}</div>
 					</div>
 				)
 			}

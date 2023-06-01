@@ -11,35 +11,25 @@
 	padding: 0px 50px;
 	width: 100%;
 	height: $nav-height;
-	background-color: $dark;
-	backdrop-filter: blur(10px);
+	background-color: $dark-purple;
 	transition: $transition;
-	filter: none !important;
-	pointer-events: auto !important;
-	user-select: auto !important;
 	
-
 	@include desktopS {
 		padding: 0 40px
 	}
 	@include tabletL {
 		padding: 0 25px
 	}
-
 }
 
-
-// стиль header при скроле вверх  
 .up {
 	height: $nav-scroll-height;
 	transform: translateY(0px);
-	background-color: $black-transparent;
-	box-shadow: 0 10px 30px -10px $navy-shadow;
+	background-color: $dark-purple-transparent;
+	box-shadow: 0 10px 30px -10px $dark;
 }
 
-// стиль header при скроле вниз 
 .down {
 	height: $nav-scroll-height;
 	transform: translateY(calc($nav-scroll-height) * -1);
-	box-shadow: 0 10px 30px -10px $navy-shadow;
 }

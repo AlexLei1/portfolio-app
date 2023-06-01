@@ -1,22 +1,12 @@
-@import '../../../../../assets/styles/variables.scss';
-
-@keyframes appear {
-	0% {
-		opacity: 0;
-		translate: -30px 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
 
 
 .nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	
+
 	> ul {
 		display: flex;
 		align-items: center;
@@ -29,14 +19,19 @@
 			a {
 				padding: 10px;
 				text-decoration: none;
-				color: #fff;
+				color: $lightest-purple;
 				font-size: $fz-xs;
+				transition: $transition;
+
+				&:hover {
+					color: $primary-color
+				}
 	
 				&:before {
 					font-family: $font-mono;
 					content: '0' counter(item) '.';
 					margin-right: 5px;
-					color: rgb(0, 238, 255);
+					color: $primary-color;
 					font-size: $fz-xs;
 					text-align: right;
 				}

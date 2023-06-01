@@ -13,7 +13,7 @@ const Nav: FC = () => {
 
 	const {isShow} = useTypedSelector(state => state.burger)
 	const {toggleBurger} = useActions()
-
+	console.log(document.body)
 	useEffect(() => {
 		isShow ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
  	}, [isShow]);

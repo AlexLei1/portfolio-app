@@ -13,20 +13,21 @@ html {
 
 ::-webkit-scrollbar {
 	width: 5px;
+	height: 5px;
 }
 
 ::-webkit-scrollbar-track{
-	background: $dark-purpal;
+	background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: $white;
+	background-color: $lightest-purple;
 	border-radius: 50px;
 }
 
 ::selection {
 	background-color: transparent;
-	color: red;
+	color: $lightest-purple;
 }
 
 
@@ -34,9 +35,9 @@ html {
 body {
 	width: 100%;
 	min-height: 100%;
-	background: $dark;
+	background: $dark-purple;
 	font-size: $fz-xl;
-	color: $lightest-purpal;
+	color: $lightest-purple;
 	font-family: $font-sans;
 	line-height: 1.3;
 

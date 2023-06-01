@@ -1,4 +1,6 @@
-@import 'app/assets/styles/variables';
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 
 .container{
 	display: flex;
@@ -8,15 +10,14 @@
 	bottom: 0;
 	right: 0px;
 	padding: 50px 10px;
-	width: min(75vw, 400px);
+	width: min(75vw, 300px);
 	height: 100vh;
-	outline: 0px;
-	background-color: $light-navy;
-	box-shadow: -10px 0px 30px -15px $navy-shadow;
+	background-color: $purple;
+	box-shadow: -10px 0px 30px -15px $dark;
 	z-index: 9;
 	transform: translateX(100vw);
 	visibility: hidden;
-	transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+	transition: $transition;
 
 	nav {
 		display: flex;
@@ -29,13 +30,6 @@
 
 
 		> ul {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			display: block;
-			padding: 0px;
-			margin: 0px;
-			list-style: none;
 			width: 100%;
 
 			li {
@@ -46,22 +40,24 @@
 				a {
 					display: inline-block;
 					text-decoration: none;
-					text-decoration-skip-ink: auto;
-					color: #fff;
+					color: $lightest-purple;
 					position: relative;
 					transition: $transition;
 					width: 100%;
 					padding: 3px 20px 20px;
-					font-size: clamp($fz-sm, 4vw, $fz-lg);
+					font-size: clamp($fz-sm, 5vw, $fz-lg);
 					
+					&:hover {
+						color: $primary-color;
+					}
 
 					&:before {
 						content: "0" counter(item) ".";
 						display: block;
 						font-family: $font-mono;
-						color: rgb(0, 238, 255);
+						color: $primary-color;
 						margin-bottom: 5px;
-						font-size: clamp($fz-sm, 4vw, $fz-lg);
+						font-size: clamp($fz-sm, 5vw, $fz-lg);
 						text-align: center;
 					}
 				}

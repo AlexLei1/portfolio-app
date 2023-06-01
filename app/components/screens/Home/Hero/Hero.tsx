@@ -1,6 +1,5 @@
 import {FC, useState} from 'react'
 import styles from './Hero.module.scss'
-import cn from 'classnames'
 import { useCheckingScope } from '@/hooks/useCheckingScope';
 import TypingText from '@/ui/TypingText/TypingText';
 
@@ -9,7 +8,6 @@ const Hero:FC = () => {
 
 
 	return (
-
 		<section ref={ref} className={styles.section}>
 			<div className={styles.title}>
 				<TypingText inView={inView}>

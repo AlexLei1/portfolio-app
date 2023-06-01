@@ -1,23 +1,5 @@
 @import 'variables';
 
-// @mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
-//   font-size: $font-size * 1px;
-//   // font-size: $font-size * 0.1rem;
-//   // example using rem values and 62.5% font-size so 1rem = 10px
-
-//   @if $line-height==normal {
-//     line-height: normal;
-//   } @else {
-//     line-height: $line-height / $font-size;
-//   }
-
-//   @if $letter-spacing==normal {
-//     letter-spacing: normal;
-//   } @else {
-//     letter-spacing: #{$letter-spacing / $font-size}em;
-//   }
-// }
-
 @mixin mobileS {
   @media only screen and (max-width: $mobileS) {
     @content;

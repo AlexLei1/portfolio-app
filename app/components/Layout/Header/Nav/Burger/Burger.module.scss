@@ -1,35 +1,36 @@
-@import '../../../../../assets/styles/_variables.scss';
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 
 .container{
 	display: none;
 }
 
 @media(max-width: 768px) {
-
 	.container{
 		display: block;
-
 		
 		.burger {
 			display: flex;
 			position: relative;
+			cursor: pointer;
 			border: none;
 			padding: 0;
 			z-index: 10;
 		
 			> span {
-				height: 3px;
-				width: 42px;
-				transition-duration: .25s;
-				transition-delay: .25s;	
+				height: 2px;
+				width: 35px;
+				transition-duration: .1s;
+				transition-delay: .1s;	
 		
 				&::before {
 					left: 0;
 					position: absolute;
-					top: -10px;
-					height: 3px;
-					width: 42px;
-					background-color: rgb(255, 255, 255);
+					top: -8px;
+					height: 2px;
+					width: 35px;
+					background-color: $lightest-purple;
 					content: "";
 					transition-duration: .25s;
 					transition: transform .25s, top .25s .25s;
@@ -38,10 +39,10 @@
 				&::after {
 					left: 0;
 					position: absolute;
-					top: 10px;
-					height: 3px;
-					width: 42px;
-					background-color:rgb(255, 255, 255);
+					top: 8px;
+					height: 2px;
+					width: 35px;
+					background-color: $lightest-purple;
 					content: "";
 					transition-duration: .25s;
 					transition: transform .25s, top .25s .25s;

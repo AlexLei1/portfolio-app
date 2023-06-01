@@ -1,12 +1,17 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .container{
 	position: relative;
-	display: grid;
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
-	grid-template-columns: 3fr 2fr;
 	gap: 50px;
 
-	@media(max-width: 1000px){
-		// display: block;
-		// padding-bottom: 300px
+
+	@include desktopXS {
+		flex-direction: column;
+		gap: 25px;
 	}
+
 }

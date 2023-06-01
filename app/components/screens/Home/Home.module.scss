@@ -1,3 +1,6 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .wrapper {
 	display: block;
 	margin: 0 auto;
@@ -6,25 +9,26 @@
 	min-height: 100vh;
 	padding: 200px 150px;
 
-	@media (max-width: 1080px){
+	@include desktopS {
 		padding: 200px 100px;
 	}
-	@media (max-width: 768px){
+	@include tabletL {
 		padding: 150px 50px;
-	}	
-	@media (max-width: 480px){
+	}
+	@include mobileL {
 		padding: 125px 25px;
 	}
-	
+
 	&.fillHeight {
 		padding: 0 150px;
-		@media (max-width: 1080px){
+		
+		@include desktopS {
 			padding: 0 100px;
 		}
-		@media (max-width: 768px){
+		@include tabletL {
 			padding: 0 50px;
-		}	
-		@media (max-width: 480px){
+		}
+		@include mobileL {
 			padding: 0 25px;
 		}
 	}
