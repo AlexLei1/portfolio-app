@@ -1,4 +1,5 @@
-@import '../../../../../assets/styles/_variables.scss';
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
 
 .tabPanel {
   position: relative;
@@ -28,7 +29,6 @@
 
     > p {
       margin-bottom: 25px;
-      color: $light-slate;
       font-family: $font-mono;
       font-size: $fz-xs;
     }

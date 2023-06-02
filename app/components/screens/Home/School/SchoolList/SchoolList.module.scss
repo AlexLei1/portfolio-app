@@ -1,4 +1,6 @@
-@import '../../../../../assets/styles/_variables.scss';
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .tabList {
 	display: flex;
 	flex-direction: column;

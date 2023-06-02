@@ -1,4 +1,5 @@
-@import '../../../assets/styles/_variables.scss';
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
 
 .title {
 	display: flex;
@@ -14,12 +15,11 @@
 		counter-increment: section;
 		content: '0' counter(section) '.';
 		margin-right: 10px;
-		color: red;
 		font-family: $font-mono;
 		font-size: clamp($fz-md, 3vw, $fz-xl);
 		font-weight: 400;
 
-		@media (max-width: 480px) {
+		@include mobileL {
 			margin-bottom: -3px;
 			margin-right: 5px;
 		}
@@ -33,15 +33,17 @@
 		width: 300px;
 		height: 1px;
 		margin-left: 20px;
-		background-color: $light-navy;
+		background-color: $light-purple;
 
-		@media (max-width: 1080px) {
+		@include desktopS {
 			width: 200px;
 		}
-		@media (max-width: 768px) {
+
+		@include tabletL {
 			width: 100%;
 		}
-		@media (max-width: 600px) {
+
+		@include tabletS {
 			margin-left: 10px;
 		}
 	}

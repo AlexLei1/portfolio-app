@@ -36,3 +36,4 @@ export const schoolsData = [
 		soft: "Managers are very quick to respond to questions and answer them fairly quickly."
 	}
 ]
+

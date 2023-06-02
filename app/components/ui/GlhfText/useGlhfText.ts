@@ -12,8 +12,6 @@ export const useGlhfText = () => {
 
 	const textTransform = (isText: string) => {
 		let iteration = 0;
-		// console.log(glhfTextRef.current?.innerText)
-		// console.log(glhfTextRef.current?.dataset.value)
 
 		const interval = setInterval(() => {
 			setIsText(isText.split().map((letter, index) => {

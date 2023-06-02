@@ -25,9 +25,10 @@ html {
 	border-radius: 50px;
 }
 
+// Selection
 ::selection {
 	background-color: transparent;
-	color: $lightest-purple;
+	color: $primary-color;
 }
 
 
@@ -52,10 +53,10 @@ section {
 	padding: 100px 0;
 	background-color: transparent;
 	
-	@media(max-width: 768px){
+	@include tabletL{
 		padding: 88px 0;
 	}
-	@media(max-width: 480px){
+	@include mobileL{
 		padding: 60px 0;
 	}
 }
@@ -68,6 +69,10 @@ h5,
 h6 {
 	font-weight: 600;
 	line-height: 1.1;
+}
+
+h2 {
+	color: $light-purple;
 }
 
 

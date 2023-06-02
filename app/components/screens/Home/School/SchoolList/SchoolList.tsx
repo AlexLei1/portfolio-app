@@ -2,21 +2,14 @@ import {FC, useState, useEffect} from 'react'
 import styles from './SchoolList.module.scss'
 import cn from 'classnames'
 
-type JSONValue =
-    | string
-    | number
-    | boolean
-    | { [x: string]: JSONValue }
-    | Array<JSONValue>;
-
 interface ISchoolsList{
-	data: JSONValue
+	data: []
 	activePanel: number
 	useActivePanel: any
 }
 
 const SchoolsList:FC<ISchoolsList> = ({activePanel, useActivePanel, data}) => {
-	console.log(activePanel)
+
 	return (
 		<div className={styles.tabList}>
 			{data.map((school: {id: number, name: string, info: string, hard: string, soft: string}, index: number) => (

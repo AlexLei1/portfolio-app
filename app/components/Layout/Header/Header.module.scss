@@ -13,6 +13,7 @@
 	height: $nav-height;
 	background-color: $dark-purple;
 	transition: $transition;
+	backdrop-filter: blur(5px);
 	
 	@include desktopS {
 		padding: 0 40px
