@@ -1,20 +1,38 @@
-import {FC, useState, useEffect} from 'react'
+import {FC, useEffect} from 'react'
 import styles from './SchoolList.module.scss'
 import cn from 'classnames'
 
+interface ISchoolObj {
+	id: number
+	name: string
+	link: string
+	data: string
+	company: string
+	hard: string
+	soft: string
+}
+
+interface dataSchools extends Array<ISchoolObj>{}
+
 interface ISchoolsList{
-	data: []
+	data: dataSchools
 	activePanel: number
 	useActivePanel: any
 }
 
+
+
 const SchoolsList:FC<ISchoolsList> = ({activePanel, useActivePanel, data}) => {
+	
+	console.log(styles.index1)
+	
 
 	return (
 		<div className={styles.tabList}>
-			{data.map((school: {id: number, name: string, info: string, hard: string, soft: string}, index: number) => (
+			{data.map((school, index) => (
 				<button key={school.id} className={cn({[styles.active]: (activePanel === index)})} onClick={() => useActivePanel(index)}><span>{school.name}</span></button>
 			))}
+			<div className={cn({[styles.index1] : activePanel === 1}, {[styles.index2] : activePanel === 2}, {[styles.index3] : activePanel === 3})}></div>
 		</div>
 	)
 }

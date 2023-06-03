@@ -5,11 +5,10 @@
   position: relative;
   width: 100%;
   margin-left: 20px;
-	
-  @media(max-width: 1000px){
-    margin: 0
-  }
   
+	@include tabletS {
+		margin: 0;
+	}
   > div {
     padding: 10px 5px;
 
@@ -22,7 +21,6 @@
 
         > a {
           text-decoration: none;
-
         }
       }
     }
@@ -35,6 +33,7 @@
 
     > div {
       font-size: 18px;
+			
       > ul {
         padding: 0px;
         margin: 0px;

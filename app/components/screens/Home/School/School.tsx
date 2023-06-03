@@ -4,13 +4,12 @@ import styles from './School.module.scss'
 import {schoolsData} from '../../../../data/school'
 import SchoolsList from './SchoolList/SchoolList';
 import SchoolPanel from './SchoolPanel/SchoolPanel';
-import { useTypedSelector } from '@/hooks/useTypedSelector';
 
 
 const School: FC = () => {
-const [activePanel, useActivePanel] = useState(0)
-const {id} = useTypedSelector(state => state.school)
-console.log(id)
+const [activePanel, useActivePanel] = useState<number>(0)
+// const {id} = useTypedSelector(state => state.school)
+
 	return (
 		<section id='school' className={styles.section}>
 			<Title>Schools</Title>

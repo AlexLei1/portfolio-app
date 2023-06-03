@@ -11,42 +11,88 @@
 	margin: 0px;
 	list-style: none;
 	
-	@media(max-width: 600px){
+	@include tabletS{
 		flex-direction: row;
     overflow-x: auto;
     width: calc(100% + 100px);
     padding-left: 50px;
     margin-left: -50px;
     margin-bottom: 30px;
-		
 	}
+
+	@include mobileL {
+		width: calc(100% + 50px);
+    padding-left: 25px;
+    margin-left: -25px;
+	}
+
 	> button {
-		background-color: transparent;
-		border: none;
-		padding: 12px 5px;
-		transition: $transition;
-		width: 100%;
-		height: $tab-height;
-		padding: 0 20px 2px;
-		color: red;
-		font-family: $font-mono;
-		font-size: $fz-xs;
-		text-align: left;
+			background-color: transparent;
+			border: none;
+			padding: 12px 5px;
+			transition: $transition;
+			min-width: 120px;
+			height: $tab-height;
+			padding: 0 20px 2px;
+			color: $lightest-purple;
+			font-family: $font-mono;
+			font-size: $fz-xs;
+			text-align: left;
 
 		&:hover {
-			background-color: rgb(16, 97, 151);
+			background-color: $purple;
 		}
 
-		@media(max-width: 600px){
+		@include tabletS{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-width: 120px;
+			padding: 0px 15px;
+			border-left: 0px;
 			text-align: center;
 		}
+
+		
 	}
-	> span {
-		color: green;
-	}
+
+	> div {
+		position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 2px;
+    height: $tab-height;
+    border-radius: $border-radius;
+    background: $light-purple;
+    transform: translateY(calc(0 * $tab-height));
+    transition: $transition;
+
+		@include tabletS {
+			display: none;
+		}
+
 	
+	}
+
+	.index1 {
+		transform: translateY(calc(1 * $tab-height));
+	}
+	.index2 {
+		transform: translateY(calc(2 * $tab-height));
+	}
+	.index3 {
+		transform: translateY(calc(3 * $tab-height));
+	}
+	.index4 {
+		transform: translateY(calc(4 * $tab-height));
+	}
+	.index5 {
+		transform: translateY(calc(5 * $tab-height));
+	}
 	.active {
-		background-color: rgb(16, 97, 151);
+		background-color: $purple;
 	}
 }
+
 
