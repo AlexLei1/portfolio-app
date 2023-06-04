@@ -1,10 +1,10 @@
 import {FC} from 'react'
 import styles from './SchoolPanel.module.scss'
-
+import { dataSchools } from 'types/school.interface'
 
 interface ISchoolPanel{
 	activePanel: number
-	data: any
+	data: dataSchools
 }
 
 const SchoolPanel:FC<ISchoolPanel> = ({activePanel, data}) => {

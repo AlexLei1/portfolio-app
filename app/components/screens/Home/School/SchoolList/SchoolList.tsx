@@ -1,18 +1,9 @@
 import {FC, useEffect} from 'react'
 import styles from './SchoolList.module.scss'
 import cn from 'classnames'
+import { dataSchools } from 'types/school.interface'
 
-interface ISchoolObj {
-	id: number
-	name: string
-	link: string
-	data: string
-	company: string
-	hard: string
-	soft: string
-}
 
-interface dataSchools extends Array<ISchoolObj>{}
 
 interface ISchoolsList{
 	data: dataSchools

@@ -2,17 +2,19 @@
 
 	> ul {
 		display: flex;
+	}
 
 	> li {
 		display: grid;
 
 		&:first-child {
+			> a {
 
+			}
 		}
 
 		&:last-child {
 
-		}
 		}
 	}
 
