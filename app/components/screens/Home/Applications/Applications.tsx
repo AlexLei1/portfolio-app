@@ -2,6 +2,8 @@ import {FC} from 'react'
 import Title from '@/components/ui/Title/Title';
 import styles from './Applications.module.scss'
 import TypingText  from '@/ui/TypingText/TypingText';
+import Link from 'next/link';
+import  Image  from 'next/image';
 
 
 
@@ -13,18 +15,24 @@ const Applications: FC = () => {
 			<ul >
 				<li >
 					<div>
-						
-					</div>
-					<div>
-						<TypingText>Hi, my name is</TypingText>
-						<h2></h2>
-						<div></div>
-						<ul>
-							<li></li>
+						<TypingText inView={true}>Hi, my name is</TypingText>
+						<div>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sequi quas dolorem totam nulla alias mollitia similique officiis illo magni, ea non, veniam a provident vel necessitatibus voluptas explicabo obcaecati!</p>
+						</div>
+						<ul className={styles.list}>
+							<li className={styles.item}>Next</li>
+							<li className={styles.item}>Redux</li>
+							<li className={styles.item}>SCSS</li>
+							<li className={styles.item}>NodeJS</li>
+							<li className={styles.item}>RTK query</li>
 						</ul>
 						<div>
-							
+							<Link href='#about'>.1</Link>
+							<Link href='#about'>.2</Link>
 						</div>
+					</div>
+					<div>
+						<Image src="/applications.jpg" alt='img' fill  />
 					</div>
 				</li>
 			</ul>
