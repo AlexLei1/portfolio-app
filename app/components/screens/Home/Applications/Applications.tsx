@@ -5,8 +5,6 @@ import TypingText  from '@/ui/TypingText/TypingText';
 import Link from 'next/link';
 import  Image  from 'next/image';
 
-
-
 const Applications: FC = () => {
 	return (
 		<section className={styles.section}>
@@ -15,24 +13,28 @@ const Applications: FC = () => {
 			<ul >
 				<li >
 					<div>
-						<TypingText inView={true}>Hi, my name is</TypingText>
-						<div>
+						<div className={styles.title}>
+							<TypingText inView={true}>Hi, my name is</TypingText>
+						</div>
+						<div className={styles.description}>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sequi quas dolorem totam nulla alias mollitia similique officiis illo magni, ea non, veniam a provident vel necessitatibus voluptas explicabo obcaecati!</p>
 						</div>
-						<ul className={styles.list}>
+						<ul className={styles.stack}>
 							<li className={styles.item}>Next</li>
 							<li className={styles.item}>Redux</li>
 							<li className={styles.item}>SCSS</li>
 							<li className={styles.item}>NodeJS</li>
 							<li className={styles.item}>RTK query</li>
 						</ul>
-						<div>
+						<div className={styles.links}>
 							<Link href='#about'>.1</Link>
 							<Link href='#about'>.2</Link>
 						</div>
 					</div>
 					<div>
-						<Image src="/applications.jpg" alt='img' fill  />
+						<div>
+							<Image  src="/applications.jpg" style={{ maxWidth: "100%"}} alt='img'  fill={true}  />
+						</div>
 					</div>
 				</li>
 			</ul>

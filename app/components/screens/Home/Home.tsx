@@ -6,6 +6,7 @@ import Hero from './Hero/Hero';
 import About from './About/About';
 import School from './School/School';
 import Applications from './Applications/Applications';
+import Contact from './Contact/Contact';
 
 
 
@@ -17,6 +18,7 @@ const Home:FC<IHome> = () => {
 			<About/>
 			<School/>
 			<Applications/>
+			{/* <Contact/> */}
 		</main>
 	)
 }
