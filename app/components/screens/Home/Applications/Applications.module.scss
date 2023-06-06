@@ -4,7 +4,7 @@
 .section {
 	background-color: transparent;
 
-	> ul {
+	> .list {
 		list-style: none;
     padding: 40px 0px 0px 0px;
     margin: 0px;
@@ -28,42 +28,66 @@
 				 
 
 				.title {
-					color: #ffee32;
+					color: $white;
 					font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-					font-size: clamp($fz-lg, 5vw, $fz-xxl);
+					font-size: clamp($fz-md, 5vw, $fz-xl);
 					font-weight: 400;
+					margin-bottom: 20px;
 				}
 				.description {
-					background-color:$dark-purple-transparent;
+					box-shadow: 0 10px 30px -15px $dark;
+					background-color: $purple-purple-transparent;
 					border-radius: 10px;
 					backdrop-filter: blur(3px);
 					padding: 20px;
 					> p {
 						font-size: 18px;
-						
 					}
+					@include tabletL {
+						background-color: transparent;
+						padding: 0px;
+					}
+
 				}
 				.stack {
 					display: flex;
-					justify-content: space-between;
+					justify-content: space-around;
 					align-items: center;
+					margin-top: 20px;
+					margin-bottom: 20px;
 
 					.item {
+						margin-right: 10px;
+					}
 
+					@include tabletL {
+						flex-wrap: wrap;
+						justify-content: flex-start;
 					}
 				}
 				.links {
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
 
+					> a {
+						margin: 0px 10px;
+					}
 				}
 
 				@include desktopS {
 					grid-column: 5 / -1;
 				}
 				@include tabletL {
+					
 					grid-column: 1 / -1;
 					padding: 40px 40px 30px;
 					text-align: left;
 				}
+				@include mobileL {
+					padding: 25px 25px 20px;
+				}
+				
 			}
 	
 			> div:last-child {
@@ -86,6 +110,8 @@
 					}
 				}
 				@include tabletL {
+					height: 100%;
+					filter: brightness(10%);
 					grid-column: 1 / -1;
 				}
 			}

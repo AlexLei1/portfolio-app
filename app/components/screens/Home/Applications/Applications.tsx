@@ -1,7 +1,6 @@
 import {FC} from 'react'
 import Title from '@/components/ui/Title/Title';
 import styles from './Applications.module.scss'
-import TypingText  from '@/ui/TypingText/TypingText';
 import Link from 'next/link';
 import  Image  from 'next/image';
 
@@ -10,11 +9,11 @@ const Applications: FC = () => {
 		<section className={styles.section}>
 			<Title>My applications</Title>
 
-			<ul >
+			<ul className={styles.list}>
 				<li >
 					<div>
 						<div className={styles.title}>
-							<TypingText inView={true}>Hi, my name is</TypingText>
+							<h1>text</h1>
 						</div>
 						<div className={styles.description}>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sequi quas dolorem totam nulla alias mollitia similique officiis illo magni, ea non, veniam a provident vel necessitatibus voluptas explicabo obcaecati!</p>
