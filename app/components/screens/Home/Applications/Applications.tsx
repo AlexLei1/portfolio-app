@@ -3,6 +3,7 @@ import Title from '@/components/ui/Title/Title';
 import styles from './Applications.module.scss'
 import Link from 'next/link';
 import  Image  from 'next/image';
+import 'font-awesome/css/font-awesome.min.css';
 
 const Applications: FC = () => {
 	return (
@@ -26,12 +27,13 @@ const Applications: FC = () => {
 							<li className={styles.item}>RTK query</li>
 						</ul>
 						<div className={styles.links}>
-							<Link href='#about'>.1</Link>
-							<Link href='#about'>.2</Link>
+							<Link className='_icon-link' href='#about'></Link>
+							<Link className='_icon-github' href='#about'></Link>
 						</div>
 					</div>
 					<div>
 						<div>
+							
 							<Image  src="/applications.jpg" style={{ maxWidth: "100%"}} alt='img'  fill={true}  />
 						</div>
 					</div>

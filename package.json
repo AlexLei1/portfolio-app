@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-		"api": "json-server db.json --port 5100 —watch",
+    "api": "json-server db.json --port 5100 —watch",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -14,7 +14,6 @@
     "@types/node": "18.15.10",
     "@types/react": "18.0.29",
     "@types/react-dom": "18.0.11",
-    "TagCloud": "^2.3.2",
     "animejs": "^3.2.1",
     "classnames": "^2.3.2",
     "eslint": "8.36.0",
@@ -27,6 +26,7 @@
     "react-redux": "^8.0.5",
     "react-scroll": "^1.8.9",
     "sass": "^1.60.0",
+    "TagCloud": "^2.3.2",
     "typed.js": "^2.0.15",
     "typescript": "5.0.2"
   },
