@@ -1,7 +1,9 @@
-// import { FC, ButtonHTMLAttributes } from 'react'
+import { FC, ButtonHTMLAttributes, ReactNode } from 'react'
 import styles from './Button.module.scss'
 
-// interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {}
+// interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
+// 	children: ReactNode 
+// }
 
 const Button = ({children, ...rest}) => {
 	return (

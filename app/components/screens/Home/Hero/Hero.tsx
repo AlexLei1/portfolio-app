@@ -21,8 +21,7 @@ const Hero:FC = () => {
 				<h3>I build things for the web.</h3>
 			</div>
 			<div>
-				<p>I am a software engineer specializing in creating exceptional digital applications. 
-					I am currently looking for a job in this field</p>
+				<p>Я инженер-программист, специализирующийся на создании исключительных цифровых приложений. Сейчас ищу работу в этой сфере</p>
 			</div>
 		</section>
 	)

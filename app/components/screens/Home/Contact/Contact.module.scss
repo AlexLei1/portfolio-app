@@ -1,8 +1,13 @@
 .section {
-	width: 100%;
-	max-width: 100%;
-	vertical-align: middle;
-	> img {
-		max-width: 100%;
-	}
+	max-width: 400px;
+	
+	> div {
+		padding-top: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		justify-content: space-around;
+
+	} 
 }

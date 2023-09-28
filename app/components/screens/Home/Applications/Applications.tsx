@@ -7,7 +7,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 const Applications: FC = () => {
 	return (
-		<section className={styles.section}>
+		<section id='applications' className={styles.section}>
 			<Title>My applications</Title>
 
 			<ul className={styles.list}>
@@ -27,13 +27,12 @@ const Applications: FC = () => {
 							<li className={styles.item}>RTK query</li>
 						</ul>
 						<div className={styles.links}>
-							<Link className='_icon-link' href='#about'></Link>
-							<Link className='_icon-github' href='#about'></Link>
+							<Link className='icon-link' href='#about'></Link>
+							<Link className='icon-github' href='https://github.com/AlexLei1/online-cinema-frontend'></Link>
 						</div>
 					</div>
 					<div>
 						<div>
-							
 							<Image  src="/applications.jpg" style={{ maxWidth: "100%"}} alt='img'  fill={true}  />
 						</div>
 					</div>

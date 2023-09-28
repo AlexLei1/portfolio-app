@@ -1,7 +1,6 @@
 import {FC} from 'react'
 import Title from '@/components/ui/Title/Title'
 import AboutContent from './AboutContent/AboutContent'
-import { useCheckingScope } from '@/hooks/useCheckingScope';
 
 const About:FC = () => {
 

@@ -18,7 +18,7 @@ const Home:FC<IHome> = () => {
 			<About/>
 			<School/>
 			<Applications/>
-			{/* <Contact/> */}
+			<Contact/>
 		</main>
 	)
 }
