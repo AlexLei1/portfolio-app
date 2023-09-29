@@ -21,9 +21,8 @@
 
 		> h2 {
 			margin: 0px;
-    	font-size: clamp(40px, 8vw, 80px);
+    		font-size: clamp(40px, 8vw, 80px);
 			margin: 0px 0px 10px;
-
 			font-weight: 600;
 		}
 
@@ -32,12 +31,12 @@
 			line-height: 0.9;
 			font-weight: 600;
 			margin: 0px;
-    	font-size: clamp(40px, 8vw, 80px);
+    		font-size: clamp(40px, 8vw, 80px);
 		}
 
 		> p {
 			margin: 20px 0px 0px;
-    	max-width: 540px;
+    		max-width: 540px;
 		}
 	}
 }

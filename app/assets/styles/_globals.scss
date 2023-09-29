@@ -60,7 +60,10 @@ section {
 		padding: 60px 0;
 	}
 }
-
+p {
+	font-family: $font-lato;
+	font-size: $fz-lg;
+}
 h1,
 h2,
 h3,

@@ -9,6 +9,7 @@
 	@include tabletS {
 		margin: 0;
 	}
+
   > div {
     padding: 10px 5px;
 
@@ -38,19 +39,21 @@
         padding: 0px;
         margin: 0px;
         list-style: none;
-        font-size: $fz-lg;
+		font-family: $font-lato;
+        font-size: $fz-md;
+		
         > li {
           position: relative;
           padding-left: 30px;
           margin-bottom: 10px;
 
-					&::before {
-						content: '>';
-						position: absolute;
-						left: 0px;
-						color: red;
-						font-size: 20px;
-					}
+			&::before {
+				content: '>';
+				position: absolute;
+				left: 0px;
+				color: red;
+				font-size: $fz-xl;
+			}
         }
       }
      }

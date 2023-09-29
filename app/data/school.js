@@ -2,38 +2,38 @@ export const schoolsData = [
 	{
 		id: 1,
 		name: "Geek Brains",
-		link: "https://itstep.org/ru",
+		link: "https://gb.ru",
 		data: "April 2022 - May 2022",
-		company: "Russian company in the field of online education, founded in 2010. The GeekBrains educational platform offers courses in information technology, programming, analytics, testing, marketing, management, and design.",
-		hard: "At the basic level, I got acquainted with IT. I learned what professions there are and picked up an interesting one for myself.",
-		soft: "..."
+		company: "Российская компания в сфере онлайн-образования, основанная в 2010 году. Образовательная платформа GeekBrains предлагает курсы по информационным технологиям, программированию, аналитике, тестированию, маркетингу, менеджменту и дизайну.",
+		hard: "На базовом уровне познакомился с IT. Узнала, какие профессии бывают, и подобрал интересную для себя.",
+		soft: "Сильно проникся данной сферой и впервые за долгое время нашел что то что вдохновило меня."
 	},
 	{
 		id: 2,
-		name: "STEP IT Academy",
-		link: "https://itstep.org/ru",
+		name: "Academy Top",
+		link: "https://msk.top-academy.ru/",
 		data: "May 2022 - September 2022",
-		company: "IT Step Computer Academy has been a leader in the field of IT education since 1999. We are the largest international company specializing in IT education, with hundreds of thousands of graduates from all over the world.",
-		hard: "This school focuses on the main technologies aimed at developing HTML (hypertext markup language) and CSS (cascading style sheets) In the course of further development in modern research and the implementation of Javascript itself (multi-paradigm development language).",
-		soft: "..."
+		company: "Данная академия предлагает различные курсы по программированию, информационным технологиям и кибербезопасности. В академии работают опытные преподаватели, которые помогают студентам получить необходимые знания и навыки для успешной карьеры в IT-индустрии.",
+		hard: "В данной школе изучил основы web разработки такие как HTML, CSS и JS.",
+		soft: "Выбор пал на данную академию, так как в ней присутствовала возможность очного обучения, что помогло мне познакомится с людьми со схожими интересами."
 	},
 	{
 		id: 3,
-		name: "JAVASCRIPT.RU",
+		name: "Javascript",
 		link: "https://learn.javascript.ru/",
 		data: "September 2022 - December 2022",
-		company: "Here you can learn JavaScript from scratch to advanced concepts like OOP.",
-		hard: "On this resource, I got a general idea about programming in general and the Javascript language. Learned how to work with it and use it when creating web pages.",
+		company: "Ресурс “Learn JavaScript” является онлайн-платформой для изучения JavaScript - популярного языка программирования, используемого для создания интерактивных веб-приложений и динамических веб-страниц. Он предлагает интерактивные курсы, учебные модули, практические задания и примеры кода для освоения основ и продвинутых концепций JavaScript.",
+		hard: "На данном ресурсе поглубже окунулся в изучение JS.",
 		soft: "..."
 	},
 	{
 		id: 4,
-		name: "Htmllesson",
-		link: "https://itstep.org/ru",
+		name: "Htmllessons",
+		link: "https://htmllessons.ru/",
 		data: "January 2023 - March 2023",
-		company: "The school allows you to study various web technologies using ready-made projects as an example. The site contains various intensives for studying frontend & backend professions.",
-		hard: "The Red-group project helped to dive deeper into web development. The intensives of this project helped to deal with such technologies as React, Next, Yarn, Tawind, Redux, Rtk-Quari & a bunch of different npm packages.",
-		soft: "Managers are very quick to respond to questions and answer them fairly quickly."
+		company: "Школа позволяет изучать различные веб-технологии на примере готовых проектов. На сайте представлены различные интенсивы по изучению frontend и backend профессий.",
+		hard: "Проект Red-group помог глубже погрузиться в веб-разработку. Интенсивы этого проекта помогли разобраться с такими технологиями как React, Next, Yarn, Tawind, Redux, Rtk-Quari и кучей разных npm-пакетов.",
+		soft: "Кураторы оказалить очень пунктуальными и открытыми к задаваемым вопросам, что помогло точично изучить некоторые аспекты конкретных технологий."
 	}
 ]
 

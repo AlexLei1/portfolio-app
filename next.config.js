@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
 	poweredByHeader: false,
-	optimizeFonts: false
+	optimizeFonts: true
 }
 
 module.exports = nextConfig

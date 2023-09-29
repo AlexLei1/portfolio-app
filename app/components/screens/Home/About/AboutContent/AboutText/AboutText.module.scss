@@ -1,7 +1,12 @@
+@import 'app/assets/styles/variables';
+@import 'app/assets/styles/mixins';
+
 .container {
 	max-width: 600px;
 	padding-top: 40px;
+
 	> p {
 		margin-bottom: 15px;
 	}
+
 }

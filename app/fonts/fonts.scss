@@ -86,3 +86,31 @@
 	font-display: auto;
 }
 
+//===========================
+//========== Lato ===========
+//===========================
+
+
+@font-face {
+	font-family: 'Lato';
+	src: url('./Lato/Lato-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('./Lato/Lato-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: auto;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('./Lato/Lato-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: auto;
+}
