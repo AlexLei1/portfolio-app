@@ -4,41 +4,40 @@ import styles from './Applications.module.scss'
 import Link from 'next/link';
 import  Image  from 'next/image';
 import 'font-awesome/css/font-awesome.min.css';
-
+import { applicationsData } from './../../../../data/application';
 const Applications: FC = () => {
 	return (
 		<section id='applications' className={styles.section}>
 			<Title>My applications</Title>
-
+			
 			<ul className={styles.list}>
-				<li >
-					<div>
-						<div className={styles.title}>
-							<h1>text</h1>
-						</div>
-						<div className={styles.description}>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sequi quas dolorem totam nulla alias mollitia similique officiis illo magni, ea non, veniam a provident vel necessitatibus voluptas explicabo obcaecati!</p>
-						</div>
-						<ul className={styles.stack}>
-							<li className={styles.item}>Next</li>
-							<li className={styles.item}>Redux</li>
-							<li className={styles.item}>SCSS</li>
-							<li className={styles.item}>NodeJS</li>
-							<li className={styles.item}>RTK query</li>
-						</ul>
-						<div className={styles.links}>
-							<Link className='icon-link' href='#about'></Link>
-							<Link className='icon-github' href='https://github.com/AlexLei1/online-cinema-frontend'></Link>
-						</div>
-					</div>
-					<div>
+				{applicationsData.map((data) => (
+					<li key={data.id}>
 						<div>
-							<Image  src="/applications.jpg" style={{ maxWidth: "100%"}} alt='img'  fill={true}  />
+							<div className={styles.title}>
+								<h1>{data.title}</h1>
+							</div>
+							<div className={styles.description}>
+								<p>{data.description}</p>
+							</div>
+							<ul className={styles.stack}>
+								{data.stacks.map((stack, itemId) => (
+									<li className={styles.item} key={itemId}>{stack}</li>
+								) )}
+							</ul>
+							<div className={styles.links}>
+								<Link className='icon-link' href='#about'></Link>
+								<Link className='icon-github' href='https://github.com/AlexLei1/online-cinema-frontend'></Link>
+							</div>
 						</div>
-					</div>
-				</li>
+						<div>
+							<div>
+								<Image  src={data.img} style={{ maxWidth: "100%"}} alt='img' fill={true}/>
+							</div>
+						</div>
+					</li>
+				))}
 			</ul>
-
 		</section>
 	)
 }

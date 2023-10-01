@@ -1,3 +1,6 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .section {
 	max-width: 400px;
 	
@@ -9,5 +12,10 @@
 		text-align: center;
 		justify-content: space-around;
 
+		> h1 {
+			font-size: 48px;
+			color: $white;
+		}
 	} 
+	
 }

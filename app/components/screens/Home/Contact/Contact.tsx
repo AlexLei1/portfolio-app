@@ -8,11 +8,13 @@ const Contact:FC = () => {
 		<section id='contact' className={styles.section}>
 			<Title>Contact</Title>
 			<div>
-				<div>Get In Touch</div>
-				<div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit velit quia adipisci. Laudantium quia aliquid veritatis reprehenderit nam! Quos quia nobis maxime mollitia. Optio ad repellendus quod recusandae quae magni.</p></div>
+				<h1>Get In Touch</h1>
+				<div><p>Мой почтовый ящик всегда открыт. Если у вас есть предожения, или вы просто хотите поздороваться, я постараюсь ответить вам!</p></div>
 			</div>
 			<div>
-				<Button>Сontact</Button>
+				<Button>
+					<a href="mailto:sasha.volkov2015@yandex.ru">Сontact</a>
+				</Button>
 			</div>
 		</section>
 	)
