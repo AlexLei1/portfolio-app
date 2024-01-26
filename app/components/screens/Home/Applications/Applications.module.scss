@@ -79,6 +79,11 @@
 						color: $white;
 						text-decoration: none;
 						margin: 0px 10px;
+						opacity: 70%;
+						transition: opacity 0.3s;
+						&:hover {
+							opacity: 100%;
+						}
 					}
 				}
 
@@ -193,16 +198,22 @@
 				.links {
 					display: flex;
 					align-items: center;
-					justify-content: flex-end;
+					justify-content: flex-start;
 					font-size: 30px;
 					line-height: .1;
 					height: 50px;
 					color: $white;
 
+					
 					> a {
 						color: $white;
 						text-decoration: none;
 						margin: 0px 10px;
+						opacity: 70%;
+						transition: opacity 0.3s;
+						&:hover {
+							opacity: 100%;
+						}
 					}
 				}
 

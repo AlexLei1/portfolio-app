@@ -28,8 +28,8 @@ const Applications: FC = () => {
 									) )}
 								</ul>
 								<div className={styles.links}>
-									<Link className='icon-link' href='#about'></Link>
-									<Link className='icon-github' href=''></Link>
+									<Link className='_icon-link' href={data.linkApp}></Link>
+									<Link className='_icon-github' href={data.linkGit}></Link>
 								</div>
 							</div>
 							<div>
@@ -54,8 +54,8 @@ const Applications: FC = () => {
 									) )}
 								</ul>
 								<div className={styles.links}>
-									<Link className='icon-link' href='#about'></Link>
-									<Link className='icon-github' href='https://github.com/AlexLei1/online-cinema-frontend'></Link>
+									<Link className='_icon-link' href={data.linkApp}></Link>
+									<Link className='_icon-github' href={data.linkGit}></Link>
 								</div>
 							</div>
 						</li>
