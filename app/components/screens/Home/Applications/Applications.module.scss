@@ -4,12 +4,12 @@
 .section {
 	background-color: transparent;
 
-	> .list {
+	> ul {
 		list-style: none;
 		padding: 40px 0px 0px 0px;
 		margin: 0px;
 
-		> li {
+		> .itemLeft{
 			position: relative;
 			display: grid;
 			gap: 10px;
@@ -105,16 +105,142 @@
 				z-index: 1;
 				height: 350px;
 
-				> div {
-				
-					> img {
-						object-fit: contain;
-	
-						@include tabletL {
-							object-fit: cover;
-						}
+				> img {
+					mix-blend-mode: multiply;
+					filter: grayscale(100%) contrast(1.1) brightness(90%) opacity(60%);
+					object-fit: cover;
+					transition: .3s;
+
+					&:hover {
+						filter: none;
 					}
 				}
+				
+				@include tabletL {
+					height: 100%;
+					grid-column: 1 / -1;
+				}
+			}
+
+
+			@include tabletL {
+				margin-bottom: 70px;
+
+			}
+			@include mobileL {
+				margin-bottom: 30px;
+			}
+
+		}
+
+		> .itemRight {
+			position: relative;
+			display: grid;
+			gap: 10px;
+			margin-bottom: 100px;
+			grid-template-columns: repeat(12, 1fr);
+			align-items: center;
+			visibility: visible;
+			opacity: 1;
+			transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+	
+			> div:last-child {
+				position: relative;
+				grid-row: 1 / -1;
+				grid-column: 1 / 7;
+				text-align: left;
+				z-index: 2;
+				 
+
+				.title {
+					color: $white;
+					font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+					font-size: clamp($fz-md, 5vw, $fz-xl);
+					font-weight: 400;
+					margin-bottom: 20px;
+				}
+				.description {
+					box-shadow: 0 10px 30px -15px $dark;
+					background-color: $purple-purple-transparent;
+					border-radius: 10px;
+					backdrop-filter: blur(3px);
+					padding: 20px;
+					> p {
+						font-size: 18px;
+					}
+					@include tabletL {
+						background-color: transparent;
+						padding: 0px;
+					}
+
+				}
+				.stack {
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					margin-top: 20px;
+					margin-bottom: 20px;
+
+					.item {
+						margin-right: 10px;
+					}
+
+					@include tabletL {
+						flex-wrap: wrap;
+						justify-content: flex-start;
+					}
+				}
+				.links {
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					font-size: 30px;
+					line-height: .1;
+					height: 50px;
+					color: $white;
+
+					> a {
+						color: $white;
+						text-decoration: none;
+						margin: 0px 10px;
+					}
+				}
+
+				@include desktopS {
+					grid-column: 1 / 8;
+				}
+				@include tabletL {
+					grid-column: 1 / -1;
+					padding: 40px 40px 30px;
+					text-align: left;
+				}
+				@include mobileL {
+					padding: 25px 25px 20px;
+				}
+			}
+	
+			> div:first-child{
+				box-shadow: 0 10px 30px -15px $dark;
+				transition: $transition;
+				grid-row: 1 / -1;
+				grid-column: 6 / -1;
+				position: relative;
+				z-index: 1;
+				height: 350px;
+
+	
+				
+				> img {
+					mix-blend-mode: multiply;
+					filter: grayscale(100%) contrast(1.1) brightness(90%) opacity(60%);
+					object-fit: cover;
+					transition: .3s;
+
+					&:hover {
+						filter: none;
+					}
+				}
+				
 				@include tabletL {
 					height: 100%;
 					filter: brightness(10%);
@@ -132,5 +258,6 @@
 			}
 
 		}
+		
 	}
 }

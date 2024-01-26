@@ -4,14 +4,11 @@ import cn from 'classnames'
 import { dataSchools } from 'types/school.interface'
 
 
-
 interface ISchoolsList{
 	data: dataSchools
 	activePanel: number
 	useActivePanel: any
 }
-
-
 
 const SchoolsList:FC<ISchoolsList> = ({activePanel, useActivePanel, data}) => {
 	
