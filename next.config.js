@@ -2,7 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
 	poweredByHeader: false,
-	optimizeFonts: false
+	optimizeFonts: false,
+	experimental: {
+    appDir: true,
+  },
 }
 
 module.exports = nextConfig

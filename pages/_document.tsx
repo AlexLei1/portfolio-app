@@ -9,7 +9,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-				<title itemProp='headline'>AlexLei</title>
 				<meta itemProp='description' name='description' content='Frontend developer portfolio'/>
 				<link rel='canonical' href={currentUrl} />
 				<meta property='og:locale' content='ru' />

@@ -7,14 +7,13 @@ import SchoolPanel from './SchoolPanel/SchoolPanel';
 
 
 const School: FC = () => {
-const [activePanel, useActivePanel] = useState<number>(0)
-// const {id} = useTypedSelector(state => state.school)
+const [activePanel, setActivePanel] = useState<number>(0)
 
 	return (
 		<section id='school' className={styles.section}>
 			<Title>Schools</Title>
 			<div className={styles.inner}>
-				<SchoolsList activePanel={activePanel} useActivePanel={useActivePanel} data={schoolsData}/>
+				<SchoolsList activePanel={activePanel} setActivePanel={setActivePanel} data={schoolsData}/>
 				<SchoolPanel activePanel={activePanel} data={schoolsData}/>
 			</div>
 		</section>

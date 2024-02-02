@@ -7,10 +7,10 @@ import { dataSchools } from 'types/school.interface'
 interface ISchoolsList{
 	data: dataSchools
 	activePanel: number
-	useActivePanel: any
+	setActivePanel: any
 }
 
-const SchoolsList:FC<ISchoolsList> = ({activePanel, useActivePanel, data}) => {
+const SchoolsList:FC<ISchoolsList> = ({activePanel, setActivePanel, data}) => {
 	
 	console.log(styles.index1)
 	
@@ -18,9 +18,18 @@ const SchoolsList:FC<ISchoolsList> = ({activePanel, useActivePanel, data}) => {
 	return (
 		<div className={styles.tabList}>
 			{data.map((school, index) => (
-				<button key={school.id} className={cn({[styles.active]: (activePanel === index)})} onClick={() => useActivePanel(index)}><span>{school.name}</span></button>
+				<button 
+					key={school.id} 
+					className={cn({[styles.active]: (activePanel === index)})} 
+					onClick={() => setActivePanel(index)}>
+						<span>{school.name}</span>
+				</button>
 			))}
-			<div className={cn({[styles.index1] : activePanel === 1}, {[styles.index2] : activePanel === 2}, {[styles.index3] : activePanel === 3})}></div>
+			<div className={cn(
+				{[styles.index1] : activePanel === 1}, 
+				{[styles.index2] : activePanel === 2}, 
+				{[styles.index3] : activePanel === 3})}>
+				</div>
 		</div>
 	)
 }

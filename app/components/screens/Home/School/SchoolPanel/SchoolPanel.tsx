@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import {FC, useEffect} from 'react'
 import styles from './SchoolPanel.module.scss'
 import { dataSchools } from 'types/school.interface'
 
@@ -8,6 +8,8 @@ interface ISchoolPanel{
 }
 
 const SchoolPanel:FC<ISchoolPanel> = ({activePanel, data}) => {
+
+	
 	return (
 		<div className={styles.tabPanel}>
 			<div>
