@@ -1,7 +1,7 @@
 import {FC} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import logoImage from '@/assets/images/logo.svg'
+import logoImage from '../../../../../../public/images/logo.svg'
 import styles from './Logo.module.scss'
 const Logo: FC = () => {
 

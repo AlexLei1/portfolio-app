@@ -1,4 +1,4 @@
-import {FC, useEffect} from 'react'
+import {FC} from 'react'
 import styles from './SchoolList.module.scss'
 import cn from 'classnames'
 import { dataSchools } from 'types/school.interface'

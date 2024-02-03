@@ -1,7 +1,7 @@
 import {FC, useState} from 'react'
 import  Title  from '@/components/ui/Title/Title';
 import styles from './School.module.scss'
-import {schoolsData} from '../../../../data/school'
+import {schoolsData} from '@/data/school'
 import SchoolsList from './SchoolList/SchoolList';
 import SchoolPanel from './SchoolPanel/SchoolPanel';
 
