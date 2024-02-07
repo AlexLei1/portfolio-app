@@ -5,7 +5,7 @@
 .image {
 	animation: anim 30s infinite;
 	background-image: url("/IMG_2924.JPG");
-	@include cover-background;
+	@include cover-background; 
 	border: 3px solid black;
 	z-index: -1;
 	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
