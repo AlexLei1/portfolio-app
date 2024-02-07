@@ -21,7 +21,7 @@ const Layout: FC<ILayout> = ({ children }) => {
 				<Loader finishLoading={() => setIsLoading(false)}/>
 				) : (
 					<div className={styles.layout}>
-						{routers.asPath === '/' ? (
+						{routers.asPath.slice(0,2) === '/#' || routers.asPath === '/'? (
 							<Header/>
 						) : null}
 						<div className={isShow ? styles.filter : ''}>{children}</div>
