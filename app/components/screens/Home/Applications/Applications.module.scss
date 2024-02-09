@@ -52,7 +52,7 @@
 				}
 				.stack {
 					display: flex;
-					justify-content: space-around;
+					justify-content: flex-end;
 					align-items: center;
 					margin-top: 20px;
 					margin-bottom: 20px;
@@ -102,28 +102,34 @@
 			}
 	
 			> div:last-child {
+				position: relative;
+				border-radius: 10px;
 				box-shadow: 0 10px 30px -15px $dark;
 				transition: $transition;
 				grid-row: 1 / -1;
 				grid-column: 1 / 8;
-				position: relative;
 				z-index: 1;
-				height: 350px;
 
 				> img {
-					mix-blend-mode: multiply;
+					border-radius: 10px;
+					vertical-align: middle;
 					filter: grayscale(100%) contrast(1.1) brightness(90%) opacity(60%);
-					object-fit: cover;
+					width: 100%;
+					height: auto;
 					transition: .3s;
 
 					&:hover {
 						filter: none;
 					}
+					@include tabletL {
+						height: 100%;
+						object-fit: cover;
+					}
 				}
 				
 				@include tabletL {
-					height: 100%;
 					grid-column: 1 / -1;
+					height: 100%;
 				}
 			}
 
@@ -181,7 +187,7 @@
 				}
 				.stack {
 					display: flex;
-					justify-content: space-around;
+					justify-content: flex-start;
 					align-items: center;
 					margin-top: 20px;
 					margin-bottom: 20px;
@@ -192,7 +198,6 @@
 
 					@include tabletL {
 						flex-wrap: wrap;
-						justify-content: flex-start;
 					}
 				}
 				.links {
@@ -215,6 +220,9 @@
 							opacity: 100%;
 						}
 					}
+					@include tabletL {
+						justify-content: flex-end;
+					}
 				}
 
 				@include desktopS {
@@ -231,31 +239,35 @@
 			}
 	
 			> div:first-child{
+				position: relative;
+				border-radius: 10px;
 				box-shadow: 0 10px 30px -15px $dark;
 				transition: $transition;
 				grid-row: 1 / -1;
 				grid-column: 6 / -1;
-				position: relative;
 				z-index: 1;
-				height: 350px;
 
-	
-				
 				> img {
-					mix-blend-mode: multiply;
+					border-radius: 10px;
+					vertical-align: middle;
 					filter: grayscale(100%) contrast(1.1) brightness(90%) opacity(60%);
-					object-fit: cover;
+					width: 100%;
+					height: auto;
 					transition: .3s;
 
 					&:hover {
 						filter: none;
 					}
+
+					@include tabletL {
+						height: 100%;
+						object-fit: cover;
+					}
 				}
 				
 				@include tabletL {
+					grid-column: -1 / 1;
 					height: 100%;
-					filter: brightness(10%);
-					grid-column: 1 / -1;
 				}
 			}
 

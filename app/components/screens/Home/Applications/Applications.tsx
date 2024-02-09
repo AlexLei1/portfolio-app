@@ -33,13 +33,13 @@ const Applications: FC = () => {
 								</div>
 							</div>
 							<div>
-								<Image  src={data.img} style={{ maxWidth: "100%"}} alt='img' fill={true}/>
+								<Image  src={data.src}  alt='img' width={0} height={0} sizes='100vw' />
 							</div>
 						</li>
 					] : [
 						<li key={data.id} className={styles.itemRight}>
 							<div>
-								<Image  src={data.img} style={{ maxWidth: "100%"}} alt='img' fill={true}/>	
+								<Image  src={data.src}  alt='img' width={0} height={0} sizes='100vw' />
 							</div>
 							<div>
 								<div className={styles.title}>
@@ -68,3 +68,5 @@ const Applications: FC = () => {
 }
 
 export default Applications
+
+// https://vercel.com/blog/building-a-fast-animated-image-gallery-with-next-js
