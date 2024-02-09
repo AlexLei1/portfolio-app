@@ -22,6 +22,14 @@
 
         > a {
           text-decoration: none;
+					color: $white;
+
+					&:link {
+						color: $white;
+					}
+					&:visited  {
+						color: $white;
+					}
         }
       }
     }
