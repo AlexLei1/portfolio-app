@@ -8,23 +8,7 @@
 	width: 100%;
 	font-size: clamp(26px, 5vw, $fz-heading);
 	white-space: nowrap;
-
-	&::before {
-		position: relative;
-		bottom: 4px;
-		counter-increment: section;
-		content: '0' counter(section) '.';
-		margin-right: 10px;
-		font-family: $font-mono;
-		font-size: clamp($fz-md, 3vw, $fz-xl);
-		font-weight: 400;
-
-		@include mobileL {
-			margin-bottom: -3px;
-			margin-right: 5px;
-		}
-	}
-
+	
 	&::after {
 		content: '';
 		display: block;
