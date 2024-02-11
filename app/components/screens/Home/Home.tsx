@@ -7,13 +7,14 @@ import About from './About/About';
 import School from './School/School';
 import Applications from './Applications/Applications';
 import Contact from './Contact/Contact';
-
+import Corsor from '../../ui/Cursor/Cursor'
 
 
 const Home:FC<IHome> = () => {
 
 	return (
 		<main className={cn(styles.wrapper, styles.fillHeight)}>
+			<Corsor/>
 			<Hero/>
 			<About/>
 			<School/>

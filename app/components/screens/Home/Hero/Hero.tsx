@@ -6,6 +6,7 @@ import {motion} from 'framer-motion'
 
 const Hero:FC = () => {
 	const {ref, inView, entry} = useCheckingScope()
+	
 	const textAnimation = {
 		hidden: {
 			x: -100,
