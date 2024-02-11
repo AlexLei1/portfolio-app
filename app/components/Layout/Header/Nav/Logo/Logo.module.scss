@@ -1,8 +1,17 @@
+@import 'assets/styles/variables';
+
 .logo {
 	display: flex;
   justify-content: center;
   align-items: center;
+	color: red;
+	transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 	a {
 		max-height: 30px;
+	}
+	transition: .3s ease-in-out;
+
+	&:hover {
+		filter: drop-shadow(3px 3px 2px $light-purple);
 	}
 }
