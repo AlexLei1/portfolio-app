@@ -67,7 +67,7 @@
     "**/*.scss",
     "app/hooks/useScrollDirection.js",
     "app/configs/config.js",
-    "app/components/ui/Loader/Loader.jsx",
+    "app/components/ui/Loader/Loader.tsx",
     "app/components/ui/Button/Button.jsx",
     "pages/_app.tsx",
     "pages/_document.tsx",

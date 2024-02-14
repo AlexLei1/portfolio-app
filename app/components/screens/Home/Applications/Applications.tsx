@@ -3,7 +3,6 @@ import Title from '@/components/ui/Title/Title';
 import styles from './Applications.module.scss'
 import Link from 'next/link';
 import  Image  from 'next/image';
-import profilePic from '/public/online-cinema.png'
 import { applicationsData } from '@/data/application';
 const Applications: FC = () => {
 	

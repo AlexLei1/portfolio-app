@@ -11,14 +11,18 @@ interface ILayout {
 
 const Layout: FC<ILayout> = ({ children }) => {
 	const routers = useRouter()
-	const isHome = routers.pathname === '/'
-	const [isLoading, setIsLoading] = useState(isHome);
+	const [isLoading, setIsLoading] = useState(true);
 	const {isShow} = useTypedSelector(state => state.burger)
+
+	useEffect(() => {
+		const timeout = setTimeout(() => setIsLoading(false), 3000);
+		return () => clearTimeout(timeout);
+  }, []);
 
 	return (
 		<>
-			{isLoading && isHome ? (
-				<Loader finishLoading={() => setIsLoading(false)}/>
+			{isLoading ? (
+				<Loader />
 				) : (
 					<div className={styles.layout}>
 						{routers.asPath.slice(0,2) === '/#' || routers.asPath === '/'? (

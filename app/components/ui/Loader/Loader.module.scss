@@ -10,7 +10,7 @@
 	left: 0%;
 	background: $white;
 	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-	animation: animFw 3s linear infinite;
+	animation: animFw 3s linear 1;
 
 	&:after,
 	&:before {
@@ -62,4 +62,7 @@
 			opacity: 0.7;
 		}
 	}
+}
+.none {
+	display: none;
 }
