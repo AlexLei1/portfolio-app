@@ -7,27 +7,27 @@ export const applicationsData = [
 		id: 1,
 		title: 'Online Cinema',
 		description: 'Эта платформа предоставляет пользователям доступ к широкому спектру фильмов и мультфильмов. Это уникальное решение для тех, кто хочет наслаждаться любимыми фильмами и сериалами в любое время и из любой точки мира, используя различные устройства, такие как компьютеры, смартфоны и планшеты.',
-		stacks: ['SCSS', 'Next JS','Typescript','Axios','Redux'],
+		stacks: ['SCSS', 'Next JS', 'Typescript', 'Axios', 'Redux', 'React-Query'],
 		src: onlineCinema,
 		linkApp: 'https://github.com/AlexLei1/online-cinema-frontend',
 		linkGit: 'https://github.com/AlexLei1/online-cinema-frontend'
 	},
 	{
 		id: 2,
-		title: 'Pair Game',
-		description: 'На квадратном поле из закрытых карт игрок должен найти пары одинаковых карт, раскрывая их в последовательном порядке. Игрок начинает сначала с одной карты, затем со второй. Если обе карты раскрыты, они останутся открытыми до конца игры. В противном случае они перевернутся. Как только игрок открыл все пары на поле, игра считается завершенной.',
-		stacks: ['SCSS', 'React', 'Typescript'],
-		src: employee,
-		linkApp: 'https://github.com/AlexLei1/pair-game-app',
-		linkGit: 'https://github.com/AlexLei1/pair-game-app'
-	},	
-	{
-		id: 3,
 		title: 'Employee',
 		description: 'Это интуитивно понятное и простое в использовании приложение для управления сотрудниками, которое позволяет добавлять сотрудников и управлять их данными где угодно.',
-		stacks: ['SCSS', 'Next JS', 'Redux/Toolkit', 'Typescript'],
-		src: pairGame,
+		stacks: ['SCSS', 'Next JS', 'Redux', 'Typescript'],
+		src: employee,
 		linkApp: 'https://github.com/AlexLei1/employees-app-frontend',
 		linkGit: 'https://github.com/AlexLei1/employees-app-frontend'
 	},
+	{
+		id: 3,
+		title: 'Pair Game',
+		description: 'Это увлекательная игра, предназначенная для игроков всех возрастов и уровней навыков. В этой игре вам предстоит продемонстрировать свою наблюдательность и умение мыслить логически, чтобы успешно угадывать различные пары.',
+		stacks: ['SCSS', 'React', 'Typescript'],
+		src: pairGame,
+		linkApp: 'https://github.com/AlexLei1/pair-game-app',
+		linkGit: 'https://github.com/AlexLei1/pair-game-app'
+	},	
 ]

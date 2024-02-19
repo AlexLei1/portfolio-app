@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import {useEffect} from "react"
 import Typed from "typed.js";
 
 export const useTypedTitle = (ref, inView, children) => {
