@@ -12,7 +12,7 @@ const NavItems: FC = () => {
 				<li><Link href='#applications' scroll={false}>Applications</Link></li>
 				<li><Link href='#contact' scroll={false}>Contact</Link></li>
 			</ul>
-			<Button>Resume</Button>
+			<Button href="/pdf/Resume.pdf">Resume</Button>
 		</nav>
 	)
 }

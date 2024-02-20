@@ -12,8 +12,8 @@ const Contact:FC = () => {
 				<div><p>Мой почтовый ящик всегда открыт. Если у вас есть предожения, или вы просто хотите поздороваться, я постараюсь ответить вам!</p></div>
 			</div>
 			<div>
-				<Button>
-					<a href="mailto:sasha.volkov2015@yandex.ru">Сontact</a>
+				<Button href="mailto:sasha.volkov2015@yandex.ru">
+					Сontact
 				</Button>
 			</div>
 		</section>

@@ -21,7 +21,7 @@ const MenuItems: FC = () => {
 				<li><Link onClick={() => toggleBurger({isShow})} href='#applications' scroll={false}>Applications</Link></li>
 				<li><Link onClick={() => toggleBurger({isShow})} href='#contact' scroll={false}>Contact</Link></li>
 			</ul>
-			<Button>Resume</Button>
+			<Button href="/pdf/Resume.pdf">Resume</Button>
 		</nav>
 	</div>
 	)

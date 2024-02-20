@@ -1,15 +1,14 @@
 import { FC, ButtonHTMLAttributes, ReactNode } from 'react'
 import styles from './Button.module.scss'
+import Link from 'next/link'
 
 // interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 // 	children: ReactNode 
 // }
 
-const Button = ({children, ...rest}) => {
+const Button = ({children, href, ...rest}) => {
 	return (
-		<button className={styles.button}>
-				{children}
-		</button>
+		<Link className={styles.button} href={href} >{children}</Link>
 	)
 }
 
