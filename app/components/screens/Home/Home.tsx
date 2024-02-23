@@ -13,7 +13,7 @@ import Corsor from '../../ui/Cursor/Cursor'
 const Home:FC<IHome> = () => {
 
 	const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 1000;
+  const breakpoint = 768;
   useEffect(() => {
    const handleResizeWindow = () => setWidth(window.innerWidth);
     // subscribe to window resize event "onComponentDidMount"

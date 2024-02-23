@@ -9,11 +9,11 @@ import { useActions } from '@/hooks/useActions'
 
 const Button = ({children, href, ...rest}) => {
 	const {toggleCursor} = useActions()
-
 	const linkEnter = () => toggleCursor("link");
 	const linkLeave = () => toggleCursor("default");
+	
 	return (
-		<Link className={styles.button} href='/' ><p onMouseEnter={linkEnter} onMouseLeave={linkLeave}>{children}</p></Link>
+		<Link onMouseEnter={linkEnter} onMouseLeave={linkLeave} className={styles.button} href='/' >{children}</Link>
 	)
 }
 
