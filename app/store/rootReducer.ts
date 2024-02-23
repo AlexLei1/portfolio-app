@@ -1,9 +1,11 @@
 import { combineReducers } from "@reduxjs/toolkit"
 import { reducer as burgerReducer } from "./burger/burger.slice"
 import { reducer as schoolReducer} from "./school/school.slice"
+import { reducer as cursorReducer} from "./cursor/cursor.slice"
 
 export const reducers =  combineReducers({
 	burger: burgerReducer,
-	school: schoolReducer
+	school: schoolReducer,
+	cursor: cursorReducer
 })
 

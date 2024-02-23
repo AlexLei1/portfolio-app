@@ -18,7 +18,7 @@ const Hero:FC = () => {
 			transition: { delay: custom * 0.2}
 		}) 
 	}
-
+	
 	return (
 		<motion.section 	
 			initial='hidden'

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import {useEffect, useState, FC } from 'react'
 import cn  from 'classnames'
 import { IHome } from './home.types';
 import styles from './Home.module.scss'
@@ -12,9 +12,23 @@ import Corsor from '../../ui/Cursor/Cursor'
 
 const Home:FC<IHome> = () => {
 
+	const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 1000;
+  useEffect(() => {
+   const handleResizeWindow = () => setWidth(window.innerWidth);
+    // subscribe to window resize event "onComponentDidMount"
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      // unsubscribe "onComponentDestroy"
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
+
 	return (
 		<main className={cn(styles.wrapper, styles.fillHeight)}>
-			<Corsor/>
+			{width > breakpoint ? (
+				<Corsor/>
+			) : null} 
 			<Hero/>
 			<About/>
 			<School/>
