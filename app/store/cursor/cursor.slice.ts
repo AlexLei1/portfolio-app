@@ -5,7 +5,7 @@ interface ICursor {
 }
 
 const initialState: ICursor = {
-	cursorVariant: 'default'
+	cursorVariant: 'inactive'
 }
 
 export const cursorSlice = createSlice({

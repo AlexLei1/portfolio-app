@@ -26,26 +26,24 @@ const Cursor: FC = () => {
     };
   }, []);
 
-	const variants = {
-    default: {
-      x: mousePosition.x - 6,
-      y: mousePosition.y - 6,
-    },
-
-		link: {
-			height: 150,
-			width: 150,
-			x: mousePosition.x - 70,
-			y: mousePosition.y - 70,
-			backgroundColor: "white",
-			mixBlendMode: "difference"
-		}
- 	};
-	console.log(cursorVariant)
 	return (
 	 	<motion.div
         className="cursor"
-        variants={variants}
+        variants={{
+					active: {
+						height: 150,
+						width: 150,
+						x: mousePosition.x - 70,
+						y: mousePosition.y - 70,
+						backgroundColor: "white",
+						mixBlendMode: "difference"
+					},
+			
+					inactive: {
+						x: mousePosition.x - 6,
+						y: mousePosition.y - 6,
+					}
+				 }}
         animate={cursorVariant}>
 		</motion.div>
 	)
