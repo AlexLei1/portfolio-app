@@ -2,6 +2,8 @@ import { FC, ButtonHTMLAttributes, ReactNode } from 'react'
 import styles from './LinkItem.module.scss'
 import Link from 'next/link'
 import { useActions } from '@/hooks/useActions'
+import {motion} from 'framer-motion'
+import {leftAnimation} from '@/animations/motion'
 
 interface ILinkItem extends ButtonHTMLAttributes<HTMLButtonElement> {
 	children?: ReactNode

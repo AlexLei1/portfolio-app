@@ -1,6 +1,8 @@
 import {FC, useEffect} from 'react'
 import styles from './SchoolPanel.module.scss'
 import { dataSchools } from 'types/school.interface'
+import {motion} from 'framer-motion'
+import {rightAnimation, scaleAnimation} from '@/animations/motion'
 
 interface ISchoolPanel{
 	activePanel: number
@@ -11,19 +13,23 @@ const SchoolPanel:FC<ISchoolPanel> = ({activePanel, data}) => {
 
 	
 	return (
-		<div className={styles.tabPanel}>
+		<motion.div 
+			initial='hidden'
+			whileInView='visible'
+			viewport={{amount: 0.2, once: true}} 
+			className={styles.tabPanel}>
 			<div>
-				<h3><span><a href={data[activePanel].link}>{data[activePanel].name}</a></span></h3>
-				<p>{data[activePanel].data}</p>
+				<motion.h3 custom={6} variants={scaleAnimation}><span><a href={data[activePanel].link}>{data[activePanel].name}</a></span></motion.h3>
+				<motion.p custom={7} variants={scaleAnimation}>{data[activePanel].data}</motion.p>
 				<div>
 					<ul>
-						<li>{data[activePanel].company}</li>
-						<li>{data[activePanel].hard}</li>
-						<li>{data[activePanel].soft}</li>
+						<motion.li custom={8} variants={rightAnimation}>{data[activePanel].company}</motion.li>
+						<motion.li custom={9} variants={rightAnimation}>{data[activePanel].hard}</motion.li>
+						<motion.li custom={10} variants={rightAnimation}>{data[activePanel].soft}</motion.li>
 					</ul>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 

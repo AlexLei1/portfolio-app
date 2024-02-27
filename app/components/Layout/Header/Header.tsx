@@ -4,7 +4,8 @@ import styles from './Header.module.scss'
 import cn from 'classnames'
 import {useScrollDirection} from '@/hooks/useScrollDirection';
 import { useRouter } from 'next/router';
-
+import {motion} from 'framer-motion'
+import {leftAnimation} from '@/animations/motion'
 
 
 const Header:FC = () => {

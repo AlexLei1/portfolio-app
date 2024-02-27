@@ -3,21 +3,10 @@ import styles from './Hero.module.scss'
 import { useCheckingScope } from '@/hooks/useCheckingScope';
 import TypingText from '@/ui/TypingText/TypingText';
 import {motion} from 'framer-motion'
+import {leftAnimation} from '@/animations/motion'
 
 const Hero:FC = () => {
 	const {ref, inView, entry} = useCheckingScope()
-	
-	const textAnimation = {
-		hidden: {
-			x: -100,
-			opacity: 0,
-		},
-		visible: (custom: number) => ({
-			x: 0,
-			opacity: 1,
-			transition: { delay: custom * 0.2}
-		}) 
-	}
 	
 	return (
 		<motion.section 	
@@ -33,17 +22,17 @@ const Hero:FC = () => {
 				</TypingText>
 			</div>
 
-			<motion.div custom={1} variants={textAnimation}>
+			<motion.div custom={1} variants={leftAnimation}>
 				<h2>Alex Lei.</h2>
 			</motion.div>
 
-			<motion.div custom={2} variants={textAnimation}>
+			<motion.div custom={2} variants={leftAnimation}>
 				<h3>I build things for the web.</h3>
 			</motion.div>
 
-			<div>
+			<motion.div custom={3} variants={leftAnimation}>
 				<p>Я инженер-программист, специализирующийся на создании цифровых приложений. Сейчас ищу работу в этой сфере</p>
-			</div>
+			</motion.div>
 		</motion.section>
 	)
 }

@@ -15,11 +15,9 @@ const Home:FC<IHome> = () => {
 	const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 768;
   useEffect(() => {
-   const handleResizeWindow = () => setWidth(window.innerWidth);
-    // subscribe to window resize event "onComponentDidMount"
+   	const handleResizeWindow = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResizeWindow);
     return () => {
-      // unsubscribe "onComponentDestroy"
       window.removeEventListener("resize", handleResizeWindow);
     };
   }, []);
