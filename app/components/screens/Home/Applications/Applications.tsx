@@ -4,6 +4,8 @@ import styles from './Applications.module.scss'
 import Link from 'next/link';
 import  Image  from 'next/image';
 import { applicationsData } from '@/data/application';
+import LinkItem from '@/components/ui/LinkItem/LinkItem';
+
 const Applications: FC = () => {
 	
 	return (
@@ -28,8 +30,8 @@ const Applications: FC = () => {
 									) )}
 								</ul>
 								<div className={styles.links}>
-									<Link className='_icon-link' href={data.linkApp}></Link>
-									<Link className='_icon-github' href={data.linkGit}></Link>
+									<LinkItem typeLink={'link'} styleLink='_icon-link' href={data.linkApp}></LinkItem>
+									<LinkItem typeLink={'link'} styleLink='_icon-github' href={data.linkGit}></LinkItem>
 								</div>
 							</div>
 							<div>
@@ -54,8 +56,8 @@ const Applications: FC = () => {
 									) )}
 								</ul>
 								<div className={styles.links}>
-									<Link className='_icon-link' href={data.linkApp}></Link>
-									<Link className='_icon-github' href={data.linkGit}></Link>
+									<LinkItem typeLink={'link'} href={data.linkApp} styleLink='_icon-link'></LinkItem>
+									<LinkItem typeLink={'link'} href={data.linkGit} styleLink='_icon-github'></LinkItem>
 								</div>
 							</div>
 						</li>
@@ -68,5 +70,3 @@ const Applications: FC = () => {
 }
 
 export default Applications
-
-// https://vercel.com/blog/building-a-fast-animated-image-gallery-with-next-js

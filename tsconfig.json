@@ -68,7 +68,7 @@
     "app/hooks/useScrollDirection.js",
     "app/configs/config.js",
     "app/components/ui/Loader/Loader.tsx",
-    "app/components/ui/Button/Button.jsx",
+    "app/components/ui/LinkItem/LinkItem.jsxsx",
     "pages/_app.tsx",
     "pages/_document.tsx",
     "pages/index.tsx",
@@ -77,7 +77,7 @@
     "pages/api/data/schools.js",
     "app/data/school.js",
     ".next/types/**/*.ts"
-  ],
+, "app/components/ui/LinkItem/LinkItem.tsx"  ],
   "exclude": [
     "node_modules"
   ]

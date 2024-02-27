@@ -1,7 +1,7 @@
 import {FC} from 'react'
 import styles from './MenuItems.module.scss'
 import  Link  from 'next/link';
-import Button from '@/components/ui/Button/Button';
+import LinkItem from '@/components/ui/LinkItem/LinkItem';
 import { useTypedSelector } from '@/hooks/useTypedSelector';
 import cn from 'classnames';
 import { useActions } from '@/hooks/useActions';
@@ -21,7 +21,7 @@ const MenuItems: FC = () => {
 				<li><Link onClick={() => toggleBurger({isShow})} href='#applications' scroll={false}>Applications</Link></li>
 				<li><Link onClick={() => toggleBurger({isShow})} href='#contact' scroll={false}>Contact</Link></li>
 			</ul>
-			<Button href="/pdf/Resume.pdf">Resume</Button>
+			<LinkItem typeLink={'button'} href="/pdf/Resume.pdf">Resume</LinkItem>
 		</nav>
 	</div>
 	)

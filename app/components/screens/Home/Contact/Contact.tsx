@@ -1,7 +1,7 @@
 import {FC} from 'react'
 import styles from './Contact.module.scss'
 import Title from '@/components/ui/Title/Title';
-import Button from '@/components/ui/Button/Button';
+import LinkItem from '@/components/ui/LinkItem/LinkItem';
 
 const Contact:FC = () => {
 	return (
@@ -12,9 +12,9 @@ const Contact:FC = () => {
 				<div><p>Мой почтовый ящик всегда открыт. Если у вас есть предожения, или вы просто хотите поздороваться, я постараюсь ответить вам!</p></div>
 			</div>
 			<div>
-				<Button href="mailto:sasha.volkov2015@yandex.ru">
+				<LinkItem href="mailto:sasha.volkov2015@yandex.ru" typeLink={'button'}>
 					Сontact
-				</Button>
+				</LinkItem>
 			</div>
 		</section>
 	)

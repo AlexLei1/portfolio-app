@@ -1,7 +1,7 @@
 import {FC} from 'react'
 import styles from './NavItems.module.scss'
 import  Link  from 'next/link';
-import Button from '@/components/ui/Button/Button';
+import LinkItem from '@/components/ui/LinkItem/LinkItem';
 
 const NavItems: FC = () => {
 	return (
@@ -12,7 +12,7 @@ const NavItems: FC = () => {
 				<li><Link href='#applications' scroll={false}>Applications</Link></li>
 				<li><Link href='#contact' scroll={false}>Contact</Link></li>
 			</ul>
-			<Button href="/pdf/Resume.pdf">Resume</Button>
+			<LinkItem typeLink={'button'} href="/pdf/Resume.pdf">Resume</LinkItem>
 		</nav>
 	)
 }

@@ -31,12 +31,15 @@ const Cursor: FC = () => {
         className="cursor"
         variants={{
 					active: {
-						height: 150,
-						width: 150,
-						x: mousePosition.x - 70,
-						y: mousePosition.y - 70,
+						height: 60,
+						width: 60,
+						x: mousePosition.x - 30,
+						y: mousePosition.y - 30,
 						backgroundColor: "white",
-						mixBlendMode: "difference"
+						mixBlendMode: "overlay",
+						border: 'solid',
+						borderWidth: 2,
+						borderColor: 'red',
 					},
 			
 					inactive: {
