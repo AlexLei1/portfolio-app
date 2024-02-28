@@ -17,7 +17,7 @@ const SchoolsList:FC<ISchoolsList> = ({activePanel, setActivePanel, data}) => {
 		<motion.div 			
 			initial='hidden'
 			whileInView='visible'
-			viewport={{amount: 0.2, once: true}} 
+			viewport={{amount: 1, once: true}} 
 			className={styles.tabList}>
 			{data.map((school, index) => (
 				<motion.button 

@@ -13,7 +13,7 @@ const Title: FC<ITitle> = ({children}) => {
 		<motion.div 	
 			initial='hidden'
 			whileInView='visible'
-			viewport={{amount: 0.2, once: true}}>
+			viewport={{amount: 1, once: true}}>
 
 			<motion.h2 custom={1} variants={leftAnimation} className={styles.title}>{children}</motion.h2>
 		</motion.div>

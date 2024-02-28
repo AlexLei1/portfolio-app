@@ -8,7 +8,7 @@ const AboutText: FC = () => {
 		<motion.div 			
 			initial='hidden'
 			whileInView='visible'
-			viewport={{amount: 0.2, once: true}} 
+			viewport={{amount: 1, once: true}} 
 			className={styles.container}>
 			<motion.p custom={2} variants={scaleAnimation}>Как младший фронтенд-разработчик, я обладаю впечатляющим арсеналом навыков в HTML, 
 				CSS, JavaScript, React, Next, Redux и TypeScript. Я преуспеваю в разработке и поддержке 

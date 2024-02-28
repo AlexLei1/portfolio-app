@@ -16,7 +16,7 @@ const SchoolPanel:FC<ISchoolPanel> = ({activePanel, data}) => {
 		<motion.div 
 			initial='hidden'
 			whileInView='visible'
-			viewport={{amount: 0.2, once: true}} 
+			viewport={{amount: 1, once: true}} 
 			className={styles.tabPanel}>
 			<div>
 				<motion.h3 custom={6} variants={scaleAnimation}><span><a href={data[activePanel].link}>{data[activePanel].name}</a></span></motion.h3>

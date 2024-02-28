@@ -9,7 +9,7 @@ const AboutImage: FC = () => {
 		<motion.div 			
 			initial='hidden'
 			whileInView='visible'
-			viewport={{amount: 0.2, once: true}}>
+			viewport={{amount: 1, once: true}}>
 			<motion.div custom={4} variants={scaleAnimation} className={styles.image}></motion.div>
 		</motion.div>
 		

@@ -21,7 +21,7 @@ const Applications: FC = () => {
 						<motion.li 
 							initial='hidden'
 							whileInView='visible'
-							viewport={{amount: 0.2, once: true}} 
+							viewport={{amount: 1, once: true}} 
 							key={data.id} 
 							className={styles.itemLeft}>
 							<div>
@@ -49,7 +49,7 @@ const Applications: FC = () => {
 						<motion.li
 							initial='hidden'
 							whileInView='visible'
-							viewport={{amount: 0.2, once: true}} 
+							viewport={{amount: 1, once: true}} 
 							key={data.id} 
 							className={styles.itemRight}>
 							<motion.div  custom={2} variants={scaleAnimation}>

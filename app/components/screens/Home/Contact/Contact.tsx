@@ -11,7 +11,7 @@ const Contact:FC = () => {
 			id='contact' 
 			initial='hidden'
 			whileInView='visible'
-			viewport={{amount: 0.2, once: true}} 
+			viewport={{amount: 1, once: true}} 
 			className={styles.section}>
 			<Title>Contact</Title>
 			<div>
