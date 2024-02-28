@@ -34,7 +34,7 @@ export const topAnimation = {
 	}) 
 }
 
-export const buttonAnimation = {
+export const bottomAnimation = {
 	hidden: {
 		y: 100,
 		opacity: 0,

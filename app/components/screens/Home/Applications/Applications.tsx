@@ -6,7 +6,7 @@ import  Image  from 'next/image';
 import { applicationsData } from '@/data/application';
 import LinkItem from '@/components/ui/LinkItem/LinkItem';
 import {motion} from 'framer-motion'
-import {rightAnimation, leftAnimation, scaleAnimation} from '@/animations/motion'
+import {leftAnimation, scaleAnimation} from '@/animations/motion'
 
 const Applications: FC = () => {
 	
@@ -26,14 +26,14 @@ const Applications: FC = () => {
 							className={styles.itemLeft}>
 							<div>
 								<div className={styles.title}>
-									<motion.h1 custom={3} variants={leftAnimation}>{data.title}</motion.h1>
+									<motion.h1 custom={3} variants={scaleAnimation}>{data.title}</motion.h1>
 								</div>
-								<div className={styles.description}>
-									<motion.p custom={4} variants={leftAnimation}>{data.description}</motion.p>
-								</div>
+								<motion.div custom={4} variants={scaleAnimation} className={styles.description}>
+									<p>{data.description}</p>
+								</motion.div>
 								<ul className={styles.stack}>
 									{data.stacks.map((stack, itemId) => (
-										<motion.li custom={itemId + 5} variants={leftAnimation} className={styles.item} key={itemId}>{stack}</motion.li>
+										<motion.li custom={itemId + 5} variants={scaleAnimation} className={styles.item} key={itemId}>{stack}</motion.li>
 									) )}
 								</ul>
 								<motion.div custom={10} variants={scaleAnimation} className={styles.links}>
@@ -57,14 +57,14 @@ const Applications: FC = () => {
 							</motion.div>
 							<div>
 								<div className={styles.title}>
-									<motion.h1 custom={3} variants={rightAnimation}>{data.title}</motion.h1>
+									<motion.h1 custom={3} variants={scaleAnimation}>{data.title}</motion.h1>
 								</div>
-								<div className={styles.description}>
-									<motion.p custom={4} variants={rightAnimation}>{data.description}</motion.p>
-								</div>
+								<motion.div custom={4} variants={scaleAnimation} className={styles.description}>
+									<p >{data.description}</p>
+								</motion.div>
 								<ul className={styles.stack}>
 									{data.stacks.map((stack, itemId) => (
-										<motion.li custom={itemId + 5} variants={rightAnimation} className={styles.item} key={itemId}>{stack}</motion.li>
+										<motion.li custom={itemId + 5} variants={scaleAnimation} className={styles.item} key={itemId}>{stack}</motion.li>
 									) )}
 								</ul>
 								<motion.div custom={10} variants={scaleAnimation} className={styles.links}>
