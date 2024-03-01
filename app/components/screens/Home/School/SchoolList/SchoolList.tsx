@@ -3,7 +3,7 @@ import styles from './SchoolList.module.scss'
 import cn from 'classnames'
 import { dataSchools } from 'types/school.interface'
 import {motion} from 'framer-motion'
-import {topAnimation,scaleAnimation} from '@/animations/motion'
+import {scaleAnimation} from '@/animations/motion'
 
 interface ISchoolsList{
 	data: dataSchools
